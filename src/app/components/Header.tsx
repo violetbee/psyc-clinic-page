@@ -1,5 +1,4 @@
 import { Great_Vibes, Sen } from 'next/font/google';
-import { Carousel } from 'react-responsive-carousel';
 
 const greatVibes = Great_Vibes({ subsets: ['latin'], weight: ['400'] });
 
@@ -22,7 +21,7 @@ export const Header = () => {
         </li>
 
         <li className='group relative cursor-pointer'>
-          Hakkımızda
+          Hakkımda
           {/* hover over underline transition */}
           <div
             className='absolute w-full h-[2px] bg-gray-950 -bottom-1 left-0 transform scale-x-0 group-hover:scale-x-75 transition duration-300
@@ -30,7 +29,7 @@ export const Header = () => {
           ></div>
         </li>
         <li className='group relative cursor-pointer'>
-          Vizyon
+          Yazılar
           {/* hover over underline transition */}
           <div
             className='absolute w-full h-[2px] bg-gray-950 -bottom-1 left-0 transform scale-x-0 group-hover:scale-x-75 transition duration-300
@@ -72,7 +71,7 @@ export const Header = () => {
           className={`text-4xl lg:text-5xl font-bold leading-6 w-max flex items-center absolute text left-1/2 -translate-x-1/3 mt-2 lg:-mt-2 ${greatVibes.className}`}
         >
           Mehmet Fatih Kınık
-          <span className='absolute -bottom-2 lg:bottom-0 -left-[92px] text-2xl'>
+          <span className='absolute -bottom-2 lg:bottom-0 -left-[98px] text-2xl'>
             Uzm. Dr.
           </span>
         </h1>
@@ -80,7 +79,7 @@ export const Header = () => {
       <ul className='hidden lg:flex gap-5 mt-3'>
         {/* create hover over underline transition */}
         <li className='group relative cursor-pointer'>
-          Misyon
+          Duyurular
           {/* hover over underline transition */}
           <div
             className='absolute w-full h-[2px] bg-gray-950 -bottom-1 left-0 transform scale-x-0 group-hover:scale-x-75 transition duration-300
@@ -88,7 +87,7 @@ export const Header = () => {
           ></div>
         </li>
         <li className='group relative cursor-pointer'>
-          Örnek Menü
+          Videolar
           {/* hover over underline transition */}
           <div
             className='absolute w-full h-[2px] bg-gray-950 -bottom-1 left-0 transform scale-x-0 group-hover:scale-x-75 transition duration-300

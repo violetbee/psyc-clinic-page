@@ -1,5 +1,5 @@
-import CarouselSection from './components/CarouselSection';
-import Header from './components/Header';
+import CarouselSection from '../components/CarouselSection';
+import Header from '../components/Header';
 
 export default function Home() {
   return (
