@@ -1,10 +1,22 @@
 'use client';
 
 import { Carousel } from 'react-responsive-carousel';
+import { useRef } from 'react';
 
 export const CarouselSection = () => {
+  const carouselRef = useRef<HTMLElement>(null);
+
   return (
-    <section className='mt-4 cursor-grab'>
+    <section
+      onMouseDown={() => {
+        carouselRef.current?.classList.add('cursor-grabbing');
+      }}
+      onMouseUp={() => {
+        carouselRef.current?.classList.remove('cursor-grabbing');
+      }}
+      ref={carouselRef}
+      className='mt-4 cursor-grab'
+    >
       <Carousel
         dynamicHeight={false}
         emulateTouch={true}

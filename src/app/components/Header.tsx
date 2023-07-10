@@ -8,7 +8,7 @@ const sen = Sen({ subsets: ['latin'], weight: ['400'] });
 export const Header = () => {
   return (
     <header
-      className={`flex justify-between lg:container lg:max-w-5xl mx-auto px-4 py-3 lg:mt-5 ${sen.className}`}
+      className={`flex justify-between lg:container lg:max-w-7xl mx-auto px-4 py-3 lg:mt-5 ${sen.className}`}
     >
       <ul className='hidden lg:flex gap-5 mt-3'>
         {/* create hover over underline transition */}
@@ -69,9 +69,12 @@ export const Header = () => {
       </div>
       <div className='flex-1 flex-row justify-center'>
         <h1
-          className={`text-4xl lg:text-5xl font-bold leading-6 w-max flex items-center absolute text left-1/2 -translate-x-1/2 mt-2 lg:-mt-2 ${greatVibes.className}`}
+          className={`text-4xl lg:text-5xl font-bold leading-6 w-max flex items-center absolute text left-1/2 -translate-x-1/3 mt-2 lg:-mt-2 ${greatVibes.className}`}
         >
           Mehmet Fatih Kınık
+          <span className='absolute -bottom-2 lg:bottom-0 -left-[92px] text-2xl'>
+            Uzm. Dr.
+          </span>
         </h1>
       </div>
       <ul className='hidden lg:flex gap-5 mt-3'>
