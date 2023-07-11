@@ -88,7 +88,7 @@ export const Header = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`lg:hidden ${
+        className={`lg:hidden block ${
           isMenuOpen ? 'h-[calc(100vh-70px)]' : 'h-0'
         } bg-white border-b-[1px] overflow-hidden w-full absolute z-[999] duration-300`}
       >
