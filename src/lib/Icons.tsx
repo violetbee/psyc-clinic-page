@@ -147,9 +147,10 @@ export const Icons = {
   ),
   toggle: (props: any) => (
     <svg
-      className='h-7 w-7'
       xmlns='http://www.w3.org/2000/svg'
       fill='black'
+      width='32px'
+      height='32px'
       viewBox='0 0 24 24'
       stroke='currentColor'
       {...props}
