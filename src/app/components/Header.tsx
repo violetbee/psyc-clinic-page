@@ -14,7 +14,7 @@ export const Header = () => {
 
   return (
     <header
-      className={`bg-white border-b-[1px] sticky z-10 top-0  ${sen.className}`}
+      className={`bg-white w-full border-b-[1px] sticky z-10 top-0  ${sen.className}`}
     >
       {/* Desktop Menu */}
       <div className='flex justify-between lg:container lg:max-w-7xl mx-auto px-4 py-5 lg:pt-10'>
@@ -43,10 +43,10 @@ export const Header = () => {
           </li>
         </ul>
 
-        <div className='flex lg:hidden'>
+        <div className='flex lg:hidden w-8'>
           <button
             type='button'
-            className='flex justify-center items-center w-10 rounded-lg leading-6 text-sm font-medium text-gray-950 hover:bg-gray-100 focus:outline-none'
+            className='flex justify-center items-center w-full rounded-lg leading-6 text-sm font-medium text-gray-950 hover:bg-gray-100 focus:outline-none'
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             <Icons.toggle />
