@@ -93,6 +93,26 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <footer className='h-40 w-full bg-[#333] mt-20'>
+        <div className='lg:container lg:max-w-7xl mx-auto px-4 lg:px-0 h-full flex items-center justify-between'>
+          <div className='flex items-center gap-5'>
+            {/* <Icons.logo className='w-10 h-10' /> */}
+            <div className='flex flex-col'>
+              <h1 className='text-white font-semibold text-xl'>
+                Uzm. Dr. Mehmet Fatih Kınık
+              </h1>
+              <p className='text-gray-400 text-sm'>
+                Tüm hakları saklıdır. © 2023
+              </p>
+            </div>
+          </div>
+          <div className='flex items-center gap-5'>
+            <Icons.facebook className='w-10 h-10' />
+            <Icons.twitter className='w-10 h-10' />
+            <Icons.instagram className='w-10 h-10' />
+          </div>
+        </div>
+      </footer>
     </main>
   );
 }
