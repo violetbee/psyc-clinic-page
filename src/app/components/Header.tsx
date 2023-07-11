@@ -56,7 +56,7 @@ export const Header = () => {
         </div>
         <Link
           href='/'
-          className={`relative text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-6 ml-20 mt-2 lg:-mt-2 ${greatVibes.className}`}
+          className={`relative text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-6  mt-2 lg:-mt-2 ${greatVibes.className}`}
         >
           <span className='text-xl'>Uzm. Dr. </span>
           Mehmet Fatih Kınık
