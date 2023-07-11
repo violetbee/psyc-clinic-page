@@ -54,8 +54,8 @@ export default function Home() {
       </section>
       <section className='lg:container lg:max-w-7xl mx-auto mt-5 px-4 lg:px-0'>
         <div className='grid grid-cols-1 lg:grid-cols-3 gap-5'>
-          <div className='col-span-2 space-y-2'>
-            <h1 className='text-3xl font-bold'>Yazılar</h1>
+          <div className='col-span-2 space-y-6'>
+            <h1 className='text-3xl mt-4 font-bold'>Yazılar</h1>
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-5'>
               <div className='bg-white rounded-md shadow-md'>
                 <img
