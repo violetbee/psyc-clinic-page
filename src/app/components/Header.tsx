@@ -44,7 +44,7 @@ export const Header = () => {
         </ul>
 
         <div
-          className='flex justify-center items-center w-8 rounded-lg leading-6 text-sm font-medium text-gray-950 hover:bg-gray-100 focus:outline-none'
+          className='flex justify-center items-center w-8 rounded-lg leading-6 text-sm font-medium hover:bg-gray-100 focus:outline-none'
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           <Icons.toggle />
