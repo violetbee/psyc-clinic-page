@@ -1,4 +1,5 @@
 import { Great_Vibes, Sen } from 'next/font/google';
+import Link from 'next/link';
 
 const greatVibes = Great_Vibes({ subsets: ['latin'], weight: ['400'] });
 
@@ -7,7 +8,7 @@ const sen = Sen({ subsets: ['latin'], weight: ['400'] });
 export const Header = () => {
   return (
     <header
-      className={`flex justify-between lg:container lg:max-w-7xl mx-auto px-4 py-3 lg:mt-5 ${sen.className}`}
+      className={`flex justify-between lg:container lg:max-w-7xl mx-auto px-4 py-5 lg:mt-5 ${sen.className}`}
     >
       <ul className='hidden lg:flex gap-5 mt-3'>
         {/* create hover over underline transition */}
@@ -43,7 +44,7 @@ export const Header = () => {
         <div className='relative flex'>
           <button
             type='button'
-            className='inline-flex justify-center w-full rounded-lg  text-sm font-medium text-gray-950 hover:bg-gray-50 focus:outline-none'
+            className='inline-flex justify-center items-center w-full rounded-lg leading-6 text-sm font-medium text-gray-950 hover:bg-gray-100 focus:outline-none'
             id='options-menu'
             aria-haspopup='true'
             aria-expanded='true'
@@ -66,16 +67,15 @@ export const Header = () => {
           </button>
         </div>
       </div>
-      <div className='flex-1 flex-row justify-center'>
-        <h1
-          className={`text-4xl lg:text-5xl font-bold leading-6 w-max flex items-center absolute text left-1/2 -translate-x-1/3 mt-2 lg:-mt-2 ${greatVibes.className}`}
-        >
-          Mehmet Fatih Kınık
-          <span className='absolute -bottom-2 lg:bottom-0 -left-[98px] text-2xl'>
-            Uzm. Dr.
-          </span>
-        </h1>
-      </div>
+      <Link
+        href='/'
+        className={`relative text-4xl lg:text-5xl font-bold leading-6 ml-20 mt-2 lg:-mt-2 ${greatVibes.className}`}
+      >
+        Mehmet Fatih Kınık
+        <span className='absolute -bottom-2 lg:bottom-0 -left-[98px] text-2xl'>
+          Uzm. Dr.
+        </span>
+      </Link>
       <ul className='hidden lg:flex gap-5 mt-3'>
         {/* create hover over underline transition */}
         <li className='group relative cursor-pointer'>

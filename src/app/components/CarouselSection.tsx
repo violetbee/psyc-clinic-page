@@ -15,7 +15,7 @@ export const CarouselSection = () => {
         carouselRef.current?.classList.remove('cursor-grabbing');
       }}
       ref={carouselRef}
-      className='mt-4 cursor-grab'
+      className='cursor-grab'
     >
       <Carousel
         dynamicHeight={false}
@@ -27,7 +27,7 @@ export const CarouselSection = () => {
         autoPlay={true}
         interval={5000}
       >
-        <div className='h-[200px] lg:h-[500px] relative'>
+        <div className='h-[400px] lg:h-[500px] relative'>
           <img src='https://cdn02.plentymarkets.com/2brofzsczyt8/item/images/190608/full/Kindertapete-Rasch-Sterne-weiss-dunkelblau-245264-190608.jpg' />
 
           <div className='absolute inset-0 bg-black bg-opacity-75 flex flex-col justify-center items-center'>
@@ -40,7 +40,7 @@ export const CarouselSection = () => {
             </button>
           </div>
         </div>
-        <div className='h-[200px] lg:h-[500px]'>
+        <div className='h-[400px] lg:h-[500px]'>
           <img src='https://img.freepik.com/free-vector/weather-seamless-pattern-background-vector-cute-doodle-illustration-kids_53876-105731.jpg?w=2000' />
         </div>
       </Carousel>
