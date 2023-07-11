@@ -43,14 +43,11 @@ export const Header = () => {
           </li>
         </ul>
 
-        <div className='flex lg:hidden w-8'>
-          <button
-            type='button'
-            className='flex justify-center items-center w-full rounded-lg leading-6 text-sm font-medium text-gray-950 hover:bg-gray-100 focus:outline-none'
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            <Icons.toggle />
-          </button>
+        <div
+          className='flex justify-center items-center w-8 rounded-lg leading-6 text-sm font-medium text-gray-950 hover:bg-gray-100 focus:outline-none'
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          <Icons.toggle />
         </div>
         <Link
           href='/'
