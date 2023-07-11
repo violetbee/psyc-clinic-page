@@ -35,7 +35,7 @@ export const CarouselSection = () => {
               &quot;Background #black opacity %75, text area carousel&quot;
             </h1>
             {/* gradient bg button */}
-            <button className='w-40 mt-4 bg-gradient-to-r from-[#ffffff] to-[#eeeeee] text-black px-4 py-2 rounded-md'>
+            <button className='w-40 mt-4 bg-white text-black px-4 py-2 outline-black outline-2 outline-double outline-offset-2 hover:bg-black/90 hover:text-white duration-200'>
               Örnek Button
             </button>
           </div>

@@ -69,12 +69,10 @@ export const Header = () => {
       </div>
       <Link
         href='/'
-        className={`relative text-4xl lg:text-5xl font-bold leading-6 ml-20 mt-2 lg:-mt-2 ${greatVibes.className}`}
+        className={`relative text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-6 ml-20 mt-2 lg:-mt-2 ${greatVibes.className}`}
       >
+        <span className='text-xl'>Uzm. Dr. </span>
         Mehmet Fatih Kınık
-        <span className='absolute -bottom-2 lg:bottom-0 -left-[98px] text-2xl'>
-          Uzm. Dr.
-        </span>
       </Link>
       <ul className='hidden lg:flex gap-5 mt-3'>
         {/* create hover over underline transition */}
