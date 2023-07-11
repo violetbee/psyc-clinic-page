@@ -1,13 +1,21 @@
 import CarouselSection from '../components/CarouselSection';
 import Header from '../components/Header';
 import { Icons } from '@/libs/Icons';
+import { Pacifico } from 'next/font/google';
+
+const pacifico = Pacifico({ subsets: ['latin'], weight: ['400'] });
 
 export default function Home() {
   return (
     <main className='mx-auto w-full min-h-screen'>
       <Header />
       <CarouselSection />
-      <section className='lg:container px-4 md:px-0 lg:max-w-7xl mx-auto mt-5'>
+      <div
+        className={`bg-black text-white h-32 flex items-center justify-center text-3xl lg:text-5xl ${pacifico.className}`}
+      >
+        Terapi Yöntemleri
+      </div>
+      <section className='lg:container px-4 lg:px-0 lg:max-w-7xl mx-auto mt-5'>
         <div className='grid grid-cols-1 lg:grid-cols-3 gap-5'>
           <div className='h-40 w-full flex justify-end border-[1px] relative overflow-hidden'>
             <div className='w-8/12 flex justify-center gap-2 flex-col'>
@@ -44,7 +52,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className='lg:container lg:max-w-7xl mx-auto mt-5 px-4 md:px-0'>
+      <section className='lg:container lg:max-w-7xl mx-auto mt-5 px-4 lg:px-0'>
         <div className='grid grid-cols-1 lg:grid-cols-3 gap-5'>
           <div className='col-span-2 space-y-2'>
             <h1 className='text-3xl font-bold'>Yazılar</h1>
