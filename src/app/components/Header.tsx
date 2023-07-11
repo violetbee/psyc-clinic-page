@@ -44,19 +44,17 @@ export const Header = () => {
         </ul>
 
         <div className='flex lg:hidden'>
-          <div className='relative flex'>
-            <button
-              type='button'
-              className='inline-flex justify-center items-center w-full rounded-lg leading-6 text-sm font-medium text-gray-950 hover:bg-gray-100 focus:outline-none'
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-            >
-              <Icons.toggle />
-            </button>
-          </div>
+          <button
+            type='button'
+            className='flex justify-center items-center w-10 rounded-lg leading-6 text-sm font-medium text-gray-950 hover:bg-gray-100 focus:outline-none'
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            <Icons.toggle />
+          </button>
         </div>
         <Link
           href='/'
-          className={`relative text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-6  mt-2 lg:-mt-2 ${greatVibes.className}`}
+          className={`relative text-2xl sm:text-4xl lg:text-5xl font-bold leading-6  mt-2 lg:-mt-2 ${greatVibes.className}`}
         >
           <span className='text-xl'>Uzm. Dr. </span>
           Mehmet Fatih Kınık
@@ -88,7 +86,7 @@ export const Header = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`lg:hidden block ${
+        className={`lg:hidden ${
           isMenuOpen ? 'h-[calc(100vh-70px)]' : 'h-0'
         } bg-white border-b-[1px] overflow-hidden w-full absolute z-[999] duration-300`}
       >
