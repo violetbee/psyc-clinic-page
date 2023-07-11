@@ -1,7 +1,8 @@
-import '../globals.css';
+import '@/app/globals.css';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import Provider from './components/Provider';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -17,7 +18,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Provider>{children}</Provider>
+      </body>
     </html>
   );
 }

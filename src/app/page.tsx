@@ -1,6 +1,6 @@
-import CarouselSection from '../components/CarouselSection';
-import Header from '../components/Header';
-import { Icons } from '@/libs/Icons';
+import CarouselSection from '@/app/components/CarouselSection';
+import Header from '@/app/components/Header';
+import { Icons } from '@/lib/Icons';
 import { Pacifico } from 'next/font/google';
 
 const pacifico = Pacifico({ subsets: ['latin'], weight: ['400'] });
