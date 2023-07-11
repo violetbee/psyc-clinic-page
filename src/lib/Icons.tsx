@@ -149,7 +149,7 @@ export const Icons = {
     <svg
       className='h-7 w-7'
       xmlns='http://www.w3.org/2000/svg'
-      fill='white'
+      fill='black'
       viewBox='0 0 24 24'
       stroke='currentColor'
       {...props}
