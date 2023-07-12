@@ -2,10 +2,13 @@ import CarouselSection from '@/app/components/CarouselSection';
 import Header from '@/app/components/Header';
 import { Icons } from '@/lib/Icons';
 import { Pacifico } from 'next/font/google';
+import { getAuthSession } from '@/lib/auth';
 
 const pacifico = Pacifico({ subsets: ['latin'], weight: ['400'] });
 
-export default function Home() {
+export default async function Home() {
+  const session = await getAuthSession();
+  console.log(session);
   return (
     <main className='mx-auto w-full min-h-screen'>
       <Header />
