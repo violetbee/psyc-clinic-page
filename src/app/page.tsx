@@ -87,8 +87,8 @@ export default async function Home() {
                     carousel&quot;
                   </h1>
                   <p className='text-gray-500 text-sm'>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Quisquam, voluptatum.
+                    Lorem ipsum dolor sit amet consectetur adipisicing lorem
+                    elit. Quisquam, voluptatum.
                   </p>
                 </div>
               </div>
