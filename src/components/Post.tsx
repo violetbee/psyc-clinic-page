@@ -2,7 +2,10 @@
 import { Post } from '@prisma/client';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
-import { removeHtmlTags } from './admin/Posts';
+
+const removeHtmlTags = (str: string) => {
+  return str.replace(/<[^>]*>?/gm, '');
+};
 
 export default function Posts() {
   const posts = useQuery({

@@ -1,9 +1,9 @@
-import CarouselSection from '@/app/components/CarouselSection';
-import Header from '@/app/components/Header';
+import CarouselSection from '@/components/CarouselSection';
+import Header from '@/components/Header';
 import { Icons } from '@/lib/Icons';
 import { Pacifico } from 'next/font/google';
 import { getAuthSession } from '@/lib/auth';
-import Posts from './components/Post';
+import Posts from '../components/Post';
 
 const pacifico = Pacifico({ subsets: ['latin'], weight: ['400'] });
 
@@ -18,7 +18,7 @@ export default async function Home() {
       >
         Terapi Yöntemleri
       </div>
-      <section className='lg:container px-4 lg:px-0 lg:max-w-7xl mx-auto mt-5'>
+      <section className='lg:container px-4 xl:px-0 lg:max-w-7xl mx-auto mt-5'>
         <div className='grid grid-cols-1 lg:grid-cols-3 gap-5'>
           <div className='h-40 w-full flex justify-end border-[1px] relative overflow-hidden'>
             <div className='w-8/12 flex justify-center gap-2 flex-col'>
@@ -55,14 +55,10 @@ export default async function Home() {
           </div>
         </div>
       </section>
-      <section className='lg:container lg:max-w-7xl mx-auto mt-5 px-4 lg:px-0'>
-        <div className='grid grid-cols-1 lg:grid-cols-3 gap-5'>
-          <div className='col-span-2 space-y-6'>
-            <h1 className='text-3xl mt-4 font-bold'>Yazılar</h1>
-            <div className='grid grid-cols-1 lg:grid-cols-2 gap-5'>
-              <Posts />
-            </div>
-          </div>
+      <section className='lg:container lg:max-w-7xl mx-auto mt-5 px-4 xl:px-0'>
+        <h1 className='text-3xl mt-4 font-bold'>Yazılar</h1>
+        <div className='grid grid-cols-1 mt-6 lg:grid-cols-3 gap-5'>
+          <Posts />
         </div>
       </section>
       <footer className='h-40 w-full bg-[#333] mt-20'>

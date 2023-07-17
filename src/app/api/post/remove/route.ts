@@ -1,7 +1,7 @@
 import { getAuthSession } from '@/lib/auth';
 import prisma from '@/lib/db';
 
-export default async function DEL(req: Request) {
+export async function DELETE(req: Request) {
   try {
     const { id } = await req.json();
 

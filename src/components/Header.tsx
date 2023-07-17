@@ -87,7 +87,7 @@ export const Header = () => {
           isMenuOpen ? 'h-[calc(100vh-70px)]' : 'h-0'
         } bg-white border-b-[1px] overflow-hidden w-full absolute z-[999] duration-300`}
       >
-        <ul className='flex h-full flex-col items-center justify-evenly '>
+        <ul className='flex h-full flex-col items-center justify-start gap-20 mt-4 '>
           <li className='group relative cursor-pointer text-3xl'>
             Anasayfa
             <div
