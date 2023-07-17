@@ -9,6 +9,8 @@ export async function middleware(req: NextRequest) {
     raw: true,
   });
 
+  console.log(token);
+
   if (!token) {
     return NextResponse.redirect(new URL('/sign-in', req.nextUrl));
   } else {
