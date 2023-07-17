@@ -11,11 +11,13 @@ export default function SignInPage() {
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
+    console.log('login process started');
     signIn('credentials', {
       email,
       password,
       callbackUrl: '/admin',
     });
+    console.log('login process ended');
   };
 
   return (
