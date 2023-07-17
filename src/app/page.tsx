@@ -3,12 +3,12 @@ import Header from '@/app/components/Header';
 import { Icons } from '@/lib/Icons';
 import { Pacifico } from 'next/font/google';
 import { getAuthSession } from '@/lib/auth';
+import Posts from './components/Post';
 
 const pacifico = Pacifico({ subsets: ['latin'], weight: ['400'] });
 
 export default async function Home() {
   const session = await getAuthSession();
-  console.log(session);
   return (
     <main className='mx-auto w-full min-h-screen'>
       <Header />
@@ -60,38 +60,7 @@ export default async function Home() {
           <div className='col-span-2 space-y-6'>
             <h1 className='text-3xl mt-4 font-bold'>Yazılar</h1>
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-5'>
-              <div className='bg-white rounded-md shadow-md'>
-                <img
-                  className='w-full h-[200px] object-cover rounded-t-md'
-                  src='https://cdn02.plentymarkets.com/2brofzsczyt8/item/images/190608/full/Kindertapete-Rasch-Sterne-weiss-dunkelblau-245264-190608.jpg'
-                />
-                <div className='p-5'>
-                  <h1 className='text-xl font-bold'>
-                    &quot;Background #black opacity %75, text area
-                    carousel&quot;
-                  </h1>
-                  <p className='text-gray-500 text-sm'>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Quisquam, voluptatum.
-                  </p>
-                </div>
-              </div>
-              <div className='bg-white rounded-md shadow-md'>
-                <img
-                  className='w-full h-[200px] object-cover rounded-t-md'
-                  src='https://cdn02.plentymarkets.com/2brofzsczyt8/item/images/190608/full/Kindertapete-Rasch-Sterne-weiss-dunkelblau-245264-190608.jpg'
-                />
-                <div className='p-5'>
-                  <h1 className='text-xl font-bold'>
-                    &quot;Background #black opacity %75, text area
-                    carousel&quot;
-                  </h1>
-                  <p className='text-gray-500 text-sm'>
-                    Lorem ipsum dolor sit amet consectetur adipisicing lorem
-                    elit. Quisquam, voluptatum.
-                  </p>
-                </div>
-              </div>
+              <Posts />
             </div>
           </div>
         </div>

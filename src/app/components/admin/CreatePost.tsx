@@ -5,6 +5,10 @@ import axios from 'axios';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 
+// React Rich Text Editor (Quill)
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
+
 export default function CreatePost() {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
@@ -35,7 +39,7 @@ export default function CreatePost() {
 
   return (
     <div className='flex flex-col items-center justify-center w-full h-full'>
-      <div className='w-full max-w-md'>
+      <div className='w-full max-w-4xl'>
         <form
           onSubmit={(e) => {
             e.preventDefault();
@@ -65,16 +69,37 @@ export default function CreatePost() {
             >
               İçerik
             </label>
-            <textarea
+            {/* <textarea
               className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-64'
               id='content'
               placeholder='İçerik'
               value={content}
               onChange={(e) => setContent(e.target.value)}
+            /> */}
+
+            <ReactQuill
+              theme='snow'
+              style={{ height: '250px' }}
+              value={content}
+              onChange={setContent}
+              // modules={{
+              //   toolbar: [
+              //     [{ header: [false, 3, 2, 1] }],
+              //     ['bold', 'italic', 'underline', 'strike', 'blockquote'],
+              //     [
+              //       { list: 'ordered' },
+              //       { list: 'bullet' },
+              //       { indent: '-1' },
+              //       { indent: '+1' },
+              //     ],
+              //     ['link', 'image'],
+              //     ['clean'],
+              //   ],
+              // }}
             />
 
             <button
-              className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mt-4'
+              className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mt-14'
               type='submit'
             >
               Gönder

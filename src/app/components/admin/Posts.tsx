@@ -4,6 +4,10 @@ import { Post } from '@prisma/client';
 import { useQuery, useMutation } from '@tanstack/react-query';
 import axios from 'axios';
 
+export const removeHtmlTags = (str: string) => {
+  return str.replace(/<[^>]*>?/gm, '');
+};
+
 export default function Posts() {
   const posts = useQuery({
     queryKey: ['posts'],
@@ -49,7 +53,10 @@ export default function Posts() {
                     </td>
                     <td className='px-6 py-4 whitespace-nowrap'>
                       <div className='text-sm text-gray-900'>
-                        {post.content}
+                        {removeHtmlTags(
+                          post.content!.slice(0, 15) +
+                            (post.content?.length! > 15 ? '...' : '')
+                        )}
                       </div>
                     </td>
                     <td className='px-6 py-4 whitespace-nowrap'>
