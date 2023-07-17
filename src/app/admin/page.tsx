@@ -1,12 +1,8 @@
 import { getAuthSession } from '@/lib/auth';
-import { useRouter } from 'next/router';
+import getQueryClient from '@/lib/getQueryClient';
 
-export default async function Admin() {
-  const session = await getAuthSession();
+import Posts from '../components/admin/Posts';
 
-  return (
-    <div className='flex flex-col items-center justify-center w-screen h-screen bg-gray-100'>
-      <h1 className='text-5xl font-bold text-gray-800'>Admin Paneli</h1>
-    </div>
-  );
+export default function Admin() {
+  return <Posts />;
 }

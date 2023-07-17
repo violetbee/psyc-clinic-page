@@ -14,7 +14,7 @@ export default function SignInPage() {
     signIn('credentials', {
       email,
       password,
-      callbackUrl: '/',
+      callbackUrl: '/admin',
     });
   };
 

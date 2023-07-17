@@ -1,17 +1,31 @@
 import prisma from '@/lib/db';
 import { NextResponse } from 'next/server';
+import { getAuthSession } from '@/lib/auth';
 
-export async function GET(get: Request) {
+export async function POST(req: Request) {
   try {
-    const posts = await prisma.post.findMany({
-      orderBy: {
-        createdAt: 'desc',
+    const session = await getAuthSession();
+
+    if (!session) {
+      return new Response('Yetkisiz erişim', {
+        status: 401,
+      });
+    }
+
+    const body = await req.json();
+
+    const post = await prisma.post.create({
+      data: {
+        title: body.title,
+        content: body.content,
       },
     });
 
-    return NextResponse.json(posts);
+    return new Response('Gönderi başarıyla oluşturuldu', {
+      status: 200,
+    });
   } catch (error) {
-    return new Response('Gönderiler getirilirken bir hata oluştu', {
+    return new Response('Gönderi oluşturulurken bir hata oluştu', {
       status: 500,
     });
   }
