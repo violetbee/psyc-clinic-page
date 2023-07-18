@@ -17,7 +17,6 @@ export async function DELETE(req: Request) {
         id: body.id,
       },
     });
-    console.log('başarıyla silindi');
     return new Response('Gönderi başarıyla silindi', {
       status: 200,
     });

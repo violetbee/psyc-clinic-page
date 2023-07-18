@@ -36,7 +36,7 @@ export default function CreatePost() {
       setContent('');
       setError('');
       setTimeout(() => {
-        router.push('/admin');
+        window.location.replace('/admin');
       }, 3000);
     },
     onError: (error) => {

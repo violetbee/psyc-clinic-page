@@ -4,7 +4,6 @@ import { removeHtmlTags } from '@/lib/utils';
 import { Post } from '@prisma/client';
 import { useMutation, useQuery } from '@tanstack/react-query';
 import axios from 'axios';
-import getQueryClient from '@/lib/getQueryClient';
 
 const AdminPost = ({ post }: { post: Post }) => {
   const removePostMutation = useMutation({
@@ -14,8 +13,7 @@ const AdminPost = ({ post }: { post: Post }) => {
       console.log(error);
     },
     onSuccess: () => {
-      const queryClient = getQueryClient();
-      queryClient.invalidateQueries();
+      window.location.reload();
     },
   });
 
