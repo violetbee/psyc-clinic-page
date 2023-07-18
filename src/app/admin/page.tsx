@@ -3,11 +3,23 @@
 import { removeHtmlTags } from '@/lib/utils';
 import { Post } from '@prisma/client';
 import { useQuery, useMutation } from '@tanstack/react-query';
+import axios from 'axios';
 
 export default function AdminPage() {
   const posts = useQuery({
     queryKey: ['posts'],
     queryFn: () => fetch('/api/post/get-all').then((res) => res.json()),
+  });
+
+  const removePostMutation = useMutation({
+    mutationFn: async (id: string) =>
+      axios.delete(`/api/post/remove`, { data: { id } }),
+    onSuccess: () => {
+      posts.refetch();
+    },
+    onError: (error) => {
+      console.log(error);
+    },
   });
 
   return (
@@ -39,6 +51,9 @@ export default function AdminPage() {
                   <th scope='col' className='relative px-6 py-3'>
                     <span className='sr-only'>Düzenle</span>
                   </th>
+                  <th scope='col' className='relative px-6 py-3'>
+                    <span className='sr-only'>Sil</span>
+                  </th>
                 </tr>
               </thead>
               <tbody className='bg-white divide-y divide-gray-200'>
@@ -61,12 +76,17 @@ export default function AdminPage() {
                       </div>
                     </td>
                     <td className='px-6 py-4 whitespace-nowrap text-right text-sm font-medium'>
-                      <a
-                        href='#'
+                      <button className='text-indigo-600 hover:text-indigo-900'>
+                        Düzenle
+                      </button>
+                    </td>
+                    <td className='px-6 py-4 whitespace-nowrap text-right text-sm font-medium'>
+                      <button
+                        onClick={() => removePostMutation.mutate(post.id)}
                         className='text-indigo-600 hover:text-indigo-900'
                       >
-                        Düzenle
-                      </a>
+                        Sil
+                      </button>
                     </td>
                   </tr>
                 ))}

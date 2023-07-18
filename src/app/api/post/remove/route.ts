@@ -3,7 +3,8 @@ import prisma from '@/lib/db';
 
 export async function DELETE(req: Request) {
   try {
-    const { id } = await req.json();
+    const body = await req.json();
+    console.log(body);
 
     const session = await getAuthSession();
     if (!session) {
@@ -11,13 +12,12 @@ export async function DELETE(req: Request) {
         status: 401,
       });
     }
-
     await prisma.post.delete({
       where: {
-        id,
+        id: body.id,
       },
     });
-
+    console.log('başarıyla silindi');
     return new Response('Gönderi başarıyla silindi', {
       status: 200,
     });

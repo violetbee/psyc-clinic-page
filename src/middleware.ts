@@ -12,8 +12,6 @@ export async function middleware(req: NextRequest) {
         : 'next-auth.session-token',
   });
 
-  console.log(token);
-
   if (!token) {
     return NextResponse.redirect(new URL('/sign-in', req.nextUrl));
   } else {
