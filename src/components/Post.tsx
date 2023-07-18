@@ -7,10 +7,10 @@ import axios from 'axios';
 export default function Posts() {
   const posts = useQuery({
     queryKey: ['posts'],
-    queryFn: () => axios.get('/api/post/get-all'),
+    queryFn: () => fetch('/api/post/get-all').then((res) => res.json()),
   });
 
-  return posts.data?.data.map((post: Post) => (
+  return posts.data?.map((post: Post) => (
     <div key={post.id} className='bg-white rounded-md shadow-md'>
       <img
         className='w-full h-[200px] object-cover rounded-t-md'

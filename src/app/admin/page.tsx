@@ -3,15 +3,12 @@
 import { removeHtmlTags } from '@/lib/utils';
 import { Post } from '@prisma/client';
 import { useQuery, useMutation } from '@tanstack/react-query';
-import axios from 'axios';
 
 export default function AdminPage() {
   const posts = useQuery({
     queryKey: ['posts'],
-    queryFn: () => axios.get('/api/post/get-all'),
+    queryFn: () => fetch('/api/post/get-all').then((res) => res.json()),
   });
-
-  console.log(posts.data);
 
   return (
     <div className='flex flex-col'>
@@ -45,7 +42,7 @@ export default function AdminPage() {
                 </tr>
               </thead>
               <tbody className='bg-white divide-y divide-gray-200'>
-                {posts.data?.data?.map((post: Post) => (
+                {posts?.data?.map((post: Post) => (
                   <tr key={post.id}>
                     <td className='px-6 py-4 whitespace-nowrap'>
                       <div className='text-sm text-gray-900'>{post.title}</div>
