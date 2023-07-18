@@ -54,6 +54,10 @@ export default function CreatePost() {
         <form
           onSubmit={(e) => {
             e.preventDefault();
+            if (title.length < 3 || content.length < 3) {
+              setError('Başlık ve içerik en az 3 karakter olmalıdır.');
+              return;
+            }
             postMutation.mutate({ title, content });
           }}
           className='bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4'
