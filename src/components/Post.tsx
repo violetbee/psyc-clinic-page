@@ -1,11 +1,8 @@
 'use client';
+import { removeHtmlTags } from '@/lib/utils';
 import { Post } from '@prisma/client';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
-
-const removeHtmlTags = (str: string) => {
-  return str.replace(/<[^>]*>?/gm, '');
-};
 
 export default function Posts() {
   const posts = useQuery({
