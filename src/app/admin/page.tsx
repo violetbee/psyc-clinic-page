@@ -11,6 +11,8 @@ export default function AdminPage() {
     queryFn: () => fetch('/api/post/get-all').then((res) => res.json()),
   });
 
+  console.log(posts);
+
   const removePostMutation = useMutation({
     mutationFn: async (id: string) =>
       axios.delete(`/api/post/remove`, { data: { id } }),
