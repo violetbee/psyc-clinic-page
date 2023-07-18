@@ -1,5 +1,5 @@
-'use client';
-
+import AdminPost from '@/components/AdminPost';
+import prisma from '@/lib/db';
 import { removeHtmlTags } from '@/lib/utils';
 import { Post } from '@prisma/client';
 import { useQuery, useMutation } from '@tanstack/react-query';
@@ -8,22 +8,10 @@ import axios from 'axios';
 export const dynamic = 'force-dynamic';
 export const fetchCache = 'force-no-store';
 
-export default function AdminPage() {
-  const posts = useQuery({
-    queryKey: ['posts'],
-    queryFn: () => fetch('/api/post/get-all').then((res) => res.json()),
-  });
-
-  console.log(posts);
-
-  const removePostMutation = useMutation({
-    mutationFn: async (id: string) =>
-      axios.delete(`/api/post/remove`, { data: { id } }),
-    onSuccess: () => {
-      posts.refetch();
-    },
-    onError: (error) => {
-      console.log(error);
+export default async function AdminPage() {
+  const posts = await prisma.post.findMany({
+    orderBy: {
+      createdAt: 'desc',
     },
   });
 
@@ -62,38 +50,8 @@ export default function AdminPage() {
                 </tr>
               </thead>
               <tbody className='bg-white divide-y divide-gray-200'>
-                {posts?.data?.map((post: Post) => (
-                  <tr key={post.id}>
-                    <td className='px-6 py-4 whitespace-nowrap'>
-                      <div className='text-sm text-gray-900'>{post.title}</div>
-                    </td>
-                    <td className='px-6 py-4 whitespace-nowrap'>
-                      <div className='text-sm text-gray-900'>
-                        {removeHtmlTags(
-                          post.content!.slice(0, 15) +
-                            (post.content?.length! > 15 ? '...' : '')
-                        )}
-                      </div>
-                    </td>
-                    <td className='px-6 py-4 whitespace-nowrap'>
-                      <div className='text-sm text-gray-900'>
-                        {new Date(post.createdAt).toLocaleDateString()}
-                      </div>
-                    </td>
-                    <td className='px-6 py-4 whitespace-nowrap text-right text-sm font-medium'>
-                      <button className='text-indigo-600 hover:text-indigo-900'>
-                        Düzenle
-                      </button>
-                    </td>
-                    <td className='px-6 py-4 whitespace-nowrap text-right text-sm font-medium'>
-                      <button
-                        onClick={() => removePostMutation.mutate(post.id)}
-                        className='text-indigo-600 hover:text-indigo-900'
-                      >
-                        Sil
-                      </button>
-                    </td>
-                  </tr>
+                {posts?.map((post: Post) => (
+                  <AdminPost key={post.id} post={post} />
                 ))}
               </tbody>
             </table>

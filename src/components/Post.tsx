@@ -1,16 +1,15 @@
-'use client';
+import prisma from '@/lib/db';
 import { removeHtmlTags } from '@/lib/utils';
 import { Post } from '@prisma/client';
-import { useQuery } from '@tanstack/react-query';
-import axios from 'axios';
 
-export default function Posts() {
-  const posts = useQuery({
-    queryKey: ['posts'],
-    queryFn: () => fetch('/api/post/get-all').then((res) => res.json()),
+export default async function Posts() {
+  const posts = await prisma.post.findMany({
+    orderBy: {
+      createdAt: 'desc',
+    },
   });
 
-  return posts.data?.map((post: Post) => (
+  return posts?.map((post: Post) => (
     <div key={post.id} className='bg-white rounded-md shadow-md'>
       <img
         className='w-full h-[200px] object-cover rounded-t-md'

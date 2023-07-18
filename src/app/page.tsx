@@ -12,6 +12,7 @@ const pacifico = Pacifico({ subsets: ['latin'], weight: ['400'] });
 
 export default async function Home() {
   const session = await getAuthSession();
+
   return (
     <main className='mx-auto w-full min-h-screen'>
       <Header />
