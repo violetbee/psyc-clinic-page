@@ -5,6 +5,9 @@ import { Post } from '@prisma/client';
 import { useQuery, useMutation } from '@tanstack/react-query';
 import axios from 'axios';
 
+export const dynamic = 'force-dynamic';
+export const fetchCache = 'force-no-store';
+
 export default function AdminPage() {
   const posts = useQuery({
     queryKey: ['posts'],

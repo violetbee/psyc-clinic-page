@@ -5,6 +5,9 @@ import { Pacifico } from 'next/font/google';
 import { getAuthSession } from '@/lib/auth';
 import Posts from '../components/Post';
 
+export const dynamic = 'force-dynamic';
+export const fetchCache = 'force-no-store';
+
 const pacifico = Pacifico({ subsets: ['latin'], weight: ['400'] });
 
 export default async function Home() {
