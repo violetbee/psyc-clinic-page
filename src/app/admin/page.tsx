@@ -1,8 +1,6 @@
 import AdminPost from '@/components/AdminPost';
 import prisma from '@/lib/db';
-import { removeHtmlTags } from '@/lib/utils';
 import { Post } from '@prisma/client';
-import { useQuery, useMutation } from '@tanstack/react-query';
 import axios from 'axios';
 
 export const dynamic = 'force-dynamic';

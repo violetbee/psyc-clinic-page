@@ -3,7 +3,9 @@ import Header from '@/components/Header';
 import { Icons } from '@/lib/Icons';
 import { Pacifico } from 'next/font/google';
 import { getAuthSession } from '@/lib/auth';
-import Posts from '../components/Post';
+import HomePost from '../components/HomePost';
+import prisma from '@/lib/db';
+import type { Post } from '@prisma/client';
 
 export const dynamic = 'force-dynamic';
 export const fetchCache = 'force-no-store';
@@ -11,7 +13,11 @@ export const fetchCache = 'force-no-store';
 const pacifico = Pacifico({ subsets: ['latin'], weight: ['400'] });
 
 export default async function Home() {
-  const session = await getAuthSession();
+  const posts = await prisma.post.findMany({
+    orderBy: {
+      createdAt: 'desc',
+    },
+  });
 
   return (
     <main className='mx-auto w-full min-h-screen'>
@@ -62,7 +68,9 @@ export default async function Home() {
       <section className='lg:container lg:max-w-7xl mx-auto mt-5 px-4 xl:px-0'>
         <h1 className='text-3xl mt-4 font-bold'>Yazılar</h1>
         <div className='grid grid-cols-1 mt-6 lg:grid-cols-3 gap-5'>
-          <Posts />
+          {posts?.map((post: Post) => (
+            <HomePost key={post.id} post={post} />
+          ))}
         </div>
       </section>
       <footer className='h-40 w-full bg-[#333] mt-20'>

@@ -2,7 +2,7 @@
 
 import { removeHtmlTags } from '@/lib/utils';
 import { Post } from '@prisma/client';
-import { useMutation } from '@tanstack/react-query';
+import { useMutation, useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 
 const AdminPost = ({ post }: { post: Post }) => {
@@ -14,8 +14,17 @@ const AdminPost = ({ post }: { post: Post }) => {
     },
   });
 
+  const { data } = useQuery({
+    queryKey: ['posts'],
+    queryFn: async () => {
+      const res = await fetch('/api/post/get-all');
+      return res.json();
+    },
+    initialData: post,
+  });
+
   return (
-    <tr key={post.id}>
+    <tr key={data.id}>
       <td className='px-6 py-4 whitespace-nowrap'>
         <div className='text-sm text-gray-900'>{post.title}</div>
       </td>

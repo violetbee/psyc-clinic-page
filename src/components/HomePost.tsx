@@ -1,15 +1,20 @@
-import prisma from '@/lib/db';
-import { removeHtmlTags } from '@/lib/utils';
-import { Post } from '@prisma/client';
+'use client';
 
-export default async function Posts() {
-  const posts = await prisma.post.findMany({
-    orderBy: {
-      createdAt: 'desc',
+import { removeHtmlTags } from '@/lib/utils';
+import type { Post } from '@prisma/client';
+import { useQuery } from '@tanstack/react-query';
+
+export default function HomePost({ post }: { post: Post }) {
+  const posts = useQuery({
+    queryKey: ['posts'],
+    queryFn: async () => {
+      const res = await fetch('/api/post/get-all');
+      return res.json();
     },
+    initialData: post,
   });
 
-  return posts?.map((post: Post) => (
+  return (
     <div key={post.id} className='bg-white rounded-md shadow-md'>
       <img
         className='w-full h-[200px] object-cover rounded-t-md'
@@ -25,5 +30,5 @@ export default async function Posts() {
         </p>
       </div>
     </div>
-  ));
+  );
 }

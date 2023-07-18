@@ -5,9 +5,9 @@ import { SessionProvider } from 'next-auth/react';
 import type { ReactNode } from 'react';
 import React from 'react';
 
-const client = new QueryClient();
-
 const Provider = ({ children }: { children: ReactNode }) => {
+  const [client] = React.useState(new QueryClient());
+
   return (
     <QueryClientProvider client={client}>
       <SessionProvider>{children}</SessionProvider>
