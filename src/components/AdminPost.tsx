@@ -4,6 +4,7 @@ import { removeHtmlTags } from '@/lib/utils';
 import { Post } from '@prisma/client';
 import { useMutation, useQuery } from '@tanstack/react-query';
 import axios from 'axios';
+import Link from 'next/link';
 
 const AdminPost = ({ post }: { post: Post }) => {
   const removePostMutation = useMutation({
@@ -41,13 +42,20 @@ const AdminPost = ({ post }: { post: Post }) => {
       </td>
       <td className='px-6 py-4 whitespace-nowrap'>
         <div className='text-sm text-gray-900'>
-          {new Date(post.createdAt).toLocaleDateString()}
+          {post.createdAt.getDate() +
+            '/' +
+            post.createdAt.getMonth() +
+            '/' +
+            post.createdAt.getFullYear()}
         </div>
       </td>
       <td className='px-6 py-4 whitespace-nowrap text-right text-sm font-medium'>
-        <button className='text-indigo-600 hover:text-indigo-900'>
+        <Link
+          href={`/admin/update/${post.id}`}
+          className='text-indigo-600 hover:text-indigo-900'
+        >
           Düzenle
-        </button>
+        </Link>
       </td>
       <td className='px-6 py-4 whitespace-nowrap text-right text-sm font-medium'>
         <button

@@ -37,7 +37,7 @@ export default function CreatePost() {
       setError('');
       setTimeout(() => {
         window.location.replace('/admin');
-      }, 3000);
+      }, 2000);
     },
     onError: (error) => {
       if (axios.isAxiosError(error) && error.response) {

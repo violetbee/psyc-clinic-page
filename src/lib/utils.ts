@@ -1,3 +1,4 @@
 export const removeHtmlTags = (str: string) => {
-  return str.replace(/<[^>]*>?/gm, '');
+  // remove html tags and $nbsp; and tab space from string
+  return str.replace(/<[^>]*>?|&nbsp;/g, '');
 };
