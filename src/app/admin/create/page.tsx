@@ -79,7 +79,7 @@ export default function CreatePost() {
           }}
           className='bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4'
         >
-          <div className='mb-4'>
+          <div className='mb-4 h-full'>
             <label
               className='block text-gray-700 text-sm font-bold mb-2'
               htmlFor='title'
@@ -111,7 +111,7 @@ export default function CreatePost() {
 
             <QuillNoSSRWrapper
               theme='snow'
-              style={{ height: '250px' }}
+              className='h-64'
               value={content}
               onChange={setContent}
               modules={{
@@ -124,23 +124,26 @@ export default function CreatePost() {
                     { indent: '-1' },
                     { indent: '+1' },
                   ],
-                  ['link', 'image'],
+                  ['link'],
                   ['clean'],
                 ],
               }}
             />
-            <input
-              type='file'
-              name='file'
-              onChange={(e) => setFile(e.target.files?.[0])}
-            />
+            <div className='mt-16 py-4 flex'>
+              <input
+                type='file'
+                name='file'
+                className='w-full'
+                onChange={(e) => setFile(e.target.files?.[0])}
+              />
 
-            <button
-              className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mt-14'
-              type='submit'
-            >
-              Gönder
-            </button>
+              <button
+                className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
+                type='submit'
+              >
+                Gönder
+              </button>
+            </div>
 
             <div className='mt-4'>
               {error && (
