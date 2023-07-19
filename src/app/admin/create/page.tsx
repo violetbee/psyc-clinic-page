@@ -24,11 +24,16 @@ export default function CreatePost() {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
   const [error, setError] = useState('');
+  const [file, setFile] = useState<File>();
 
   const router = useRouter();
 
   const postMutation = useMutation({
-    mutationFn: async (data: { title: string; content: string }) => {
+    mutationFn: async (data: {
+      title: string;
+      content: string;
+      banner: string;
+    }) => {
       await axios.post('/api/post/create', data);
     },
     onSuccess: () => {
@@ -52,13 +57,25 @@ export default function CreatePost() {
     <div className='flex flex-col items-center justify-center w-full h-full'>
       <div className='w-full max-w-4xl'>
         <form
-          onSubmit={(e) => {
+          onSubmit={async (e) => {
             e.preventDefault();
-            if (title.length < 3 || content.length < 3) {
-              setError('Başlık ve içerik en az 3 karakter olmalıdır.');
-              return;
-            }
-            postMutation.mutate({ title, content });
+            try {
+              if (title.length < 3 || content.length < 3) {
+                setError('Başlık ve içerik en az 3 karakter olmalıdır.');
+                return;
+              }
+              const data = new FormData();
+              data.set('file', file as Blob);
+              const res = await fetch('/api/upload', {
+                method: 'POST',
+                body: data,
+              });
+              postMutation.mutate({
+                title,
+                content,
+                banner: file?.name as string,
+              });
+            } catch (e) {}
           }}
           className='bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4'
         >
@@ -111,6 +128,11 @@ export default function CreatePost() {
                   ['clean'],
                 ],
               }}
+            />
+            <input
+              type='file'
+              name='file'
+              onChange={(e) => setFile(e.target.files?.[0])}
             />
 
             <button

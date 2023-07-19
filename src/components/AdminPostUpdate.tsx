@@ -2,22 +2,12 @@
 
 import dynamic from 'next/dynamic';
 import 'react-quill/dist/quill.snow.css';
-import type ReactQuill from 'react-quill';
+import ReactQuill from 'react-quill';
 import { useState } from 'react';
 import { Post } from '@prisma/client';
 import { useMutation } from '@tanstack/react-query';
 import axios from 'axios';
 import { useRouter } from 'next/navigation';
-const QuillNoSSRWrapper = dynamic(
-  async () => {
-    const { default: RQ } = await import('react-quill');
-    // eslint-disable-next-line react/display-name
-    return ({ ...props }) => <RQ {...props} />;
-  },
-  {
-    ssr: false,
-  }
-) as typeof ReactQuill;
 
 export default function AdminPostUpdate({ post }: { post: Post }) {
   const [title, setTitle] = useState(post.title);
@@ -82,7 +72,7 @@ export default function AdminPostUpdate({ post }: { post: Post }) {
           İçerik
         </label>
 
-        <QuillNoSSRWrapper
+        <ReactQuill
           theme='snow'
           style={{ height: '250px' }}
           value={content}

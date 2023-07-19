@@ -21,6 +21,7 @@ model Post {
   published Boolean  @default(false)
   author    User?    @relation(fields: [authorId], references: [id])
   authorId  String?
+  banner    String?
 
   @@index([authorId])
 }
