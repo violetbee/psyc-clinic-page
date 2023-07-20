@@ -20,7 +20,7 @@ export default function HomePost({ post }: { post: Post }) {
       {post.banner ? (
         <Image
           className='w-full h-[200px] object-cover rounded-t-md'
-          src={`/images/${post.banner}`}
+          src={post.banner}
           alt='Post Banner'
           width={500}
           height={200}

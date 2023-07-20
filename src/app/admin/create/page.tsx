@@ -26,8 +26,6 @@ export default function CreatePost() {
   const [error, setError] = useState('');
   const [file, setFile] = useState<File>();
 
-  const router = useRouter();
-
   const postMutation = useMutation({
     mutationFn: async (data: {
       title: string;
@@ -65,15 +63,19 @@ export default function CreatePost() {
                 return;
               }
               const data = new FormData();
-              data.set('file', file as Blob);
-              const res = await fetch('/api/upload', {
-                method: 'POST',
-                body: data,
-              });
+              data.append('file', file as Blob);
+              data.append('upload_preset', 'my-uploads');
+              const res = await fetch(
+                'https://api.cloudinary.com/v1_1/drkrz13kv/image/upload',
+                {
+                  method: 'POST',
+                  body: data,
+                }
+              ).then((r) => r.json());
               postMutation.mutate({
                 title,
                 content,
-                banner: file?.name as string,
+                banner: res.url,
               });
             } catch (e) {}
           }}
