@@ -1,4 +1,10 @@
 import Header from '@/components/Header';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Hakkımda | Uzm. Dr. Mehmet Fatih Kınık',
+  description: 'Çocuk ve Ergen Psikiyatristi Uzm. Dr. Mehmet Fatih Kınık',
+};
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (

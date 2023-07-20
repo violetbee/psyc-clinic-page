@@ -1,9 +1,29 @@
-import Header from '@/components/Header';
 import Quill from '@/components/Quill';
 import prisma from '@/lib/db';
+import { Metadata } from 'next';
 import Image from 'next/image';
 
-export default async function Page({ params }: { params: { slug: string } }) {
+interface Props {
+  params: {
+    slug: string;
+  };
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const slug = params.slug;
+  const post = await prisma.post.findFirst({
+    where: {
+      slug,
+    },
+  });
+  return {
+    title: post?.title + ' | Uzm. Dr. Mehmet Fatih Kınık',
+    description:
+      post?.content?.slice(0, 50) + (post?.content?.length! > 50 ? '...' : ''),
+  };
+}
+
+export default async function Page({ params }: Props) {
   const post = await prisma.post.findFirst({
     where: {
       slug: params.slug,
