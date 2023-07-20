@@ -4,6 +4,7 @@ import { removeHtmlTags } from '@/lib/utils';
 import type { Post } from '@prisma/client';
 import { useQuery } from '@tanstack/react-query';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function HomePost({ post }: { post: Post }) {
   const posts = useQuery({
@@ -31,15 +32,17 @@ export default function HomePost({ post }: { post: Post }) {
           src='https://cdn02.plentymarkets.com/2brofzsczyt8/item/images/190608/full/Kindertapete-Rasch-Sterne-weiss-dunkelblau-245264-190608.jpg'
         />
       )}
-      <div className='p-5'>
-        <h1 className='text-xl font-bold'>&quot;{post.title}&quot;</h1>
-        <p className='text-gray-500 text-sm'>
-          {removeHtmlTags(
-            post.content!.slice(0, 100) +
-              (post.content?.length! > 100 ? '...' : '')
-          )}
-        </p>
-      </div>
+      <Link href={`/blog/${post.slug}`}>
+        <div className='p-5 space-y-3'>
+          <h1 className='text-xl font-bold'>&quot;{post.title}&quot;</h1>
+          <p className='text-gray-500 text-sm'>
+            {removeHtmlTags(
+              post.content!.slice(0, 100) +
+                (post.content?.length! > 100 ? '...' : '')
+            )}
+          </p>
+        </div>
+      </Link>
     </div>
   );
 }

@@ -19,28 +19,28 @@ export const Header = () => {
       {/* Desktop Menu */}
       <div className='flex justify-between lg:container lg:max-w-7xl mx-auto px-4 py-5 lg:pt-10'>
         <ul className='hidden lg:flex gap-5 mt-3'>
-          <li className='group relative cursor-pointer'>
+          <Link href='/' className='group relative cursor-pointer'>
             Anasayfa
             <div
               className='absolute w-full h-[2px] bg-gray-950 -bottom-1 left-0 transform scale-x-0 group-hover:scale-x-75 transition duration-300
             ease-in-out'
             ></div>
-          </li>
+          </Link>
 
-          <li className='group relative cursor-pointer'>
+          <Link href='/hakkimda' className='group relative cursor-pointer'>
             Hakkımda
             <div
               className='absolute w-full h-[2px] bg-gray-950 -bottom-1 left-0 transform scale-x-0 group-hover:scale-x-75 transition duration-300
             ease-in-out'
             ></div>
-          </li>
-          <li className='group relative cursor-pointer'>
+          </Link>
+          <Link href='#' className='group relative cursor-pointer'>
             Yazılar
             <div
               className='absolute w-full h-[2px] bg-gray-950 -bottom-1 left-0 transform scale-x-0 group-hover:scale-x-75 transition duration-300
             ease-in-out'
             ></div>
-          </li>
+          </Link>
         </ul>
 
         <div
@@ -57,27 +57,27 @@ export const Header = () => {
           Mehmet Fatih Kınık
         </Link>
         <ul className='hidden lg:flex gap-5 mt-3'>
-          <li className='group relative cursor-pointer'>
+          <Link href='#' className='group relative cursor-pointer'>
             Duyurular
             <div
               className='absolute w-full h-[2px] bg-gray-950 -bottom-1 left-0 transform scale-x-0 group-hover:scale-x-75 transition duration-300
             ease-in-out'
             ></div>
-          </li>
-          <li className='group relative cursor-pointer'>
+          </Link>
+          <Link href='#' className='group relative cursor-pointer'>
             Videolar
             <div
               className='absolute w-full h-[2px] bg-gray-950 -bottom-1 left-0 transform scale-x-0 group-hover:scale-x-75 transition duration-300
             ease-in-out'
             ></div>
-          </li>
-          <li className='group relative cursor-pointer'>
+          </Link>
+          <Link href='#' className='group relative cursor-pointer'>
             İletişim
             <div
               className='absolute w-full h-[2px] bg-gray-950 -bottom-1 left-0 transform scale-x-0 group-hover:scale-x-75 transition duration-300
             ease-in-out'
             ></div>
-          </li>
+          </Link>
         </ul>
       </div>
 
@@ -88,48 +88,51 @@ export const Header = () => {
         } bg-white border-b-[1px] overflow-hidden w-full absolute z-[999] duration-300`}
       >
         <ul className='flex h-full flex-col items-center justify-start gap-20 mt-4 '>
-          <li className='group relative cursor-pointer text-3xl'>
+          <Link href='/' className='group relative cursor-pointer text-3xl'>
             Anasayfa
             <div
               className='absolute w-full h-[2px] bg-gray-950 -bottom-1 left-0 transform scale-x-0 group-hover:scale-x-75 transition duration-300
             ease-in-out'
             ></div>
-          </li>
-          <li className='group relative cursor-pointer text-3xl'>
+          </Link>
+          <Link
+            href='/hakkimda'
+            className='group relative cursor-pointer text-3xl'
+          >
             Hakkımda
             <div
               className='absolute w-full h-[2px] bg-gray-950 -bottom-1 left-0 transform scale-x-0 group-hover:scale-x-75 transition duration-300
             ease-in-out'
             ></div>
-          </li>{' '}
-          <li className='group relative cursor-pointer text-3xl'>
+          </Link>
+          <Link href='#' className='group relative cursor-pointer text-3xl'>
             Yazılar
             <div
               className='absolute w-full h-[2px] bg-gray-950 -bottom-1 left-0 transform scale-x-0 group-hover:scale-x-75 transition duration-300
             ease-in-out'
             ></div>
-          </li>
-          <li className='group relative cursor-pointer text-3xl'>
+          </Link>
+          <Link href='#' className='group relative cursor-pointer text-3xl'>
             Duyurular
             <div
               className='absolute w-full h-[2px] bg-gray-950 -bottom-1 left-0 transform scale-x-0 group-hover:scale-x-75 transition duration-300
             ease-in-out'
             ></div>
-          </li>
-          <li className='group relative cursor-pointer text-3xl'>
+          </Link>
+          <Link href='#' className='group relative cursor-pointer text-3xl'>
             Videolar
             <div
               className='absolute w-full h-[2px] bg-gray-950 -bottom-1 left-0 transform scale-x-0 group-hover:scale-x-75 transition duration-300
             ease-in-out'
             ></div>
-          </li>
-          <li className='group relative cursor-pointer text-3xl'>
+          </Link>
+          <Link href='#' className='group relative cursor-pointer text-3xl'>
             İletişim
             <div
               className='absolute w-full h-[2px] bg-gray-950 -bottom-1 left-0 transform scale-x-0 group-hover:scale-x-75 transition duration-300
             ease-in-out'
             ></div>
-          </li>
+          </Link>
         </ul>
       </div>
     </header>

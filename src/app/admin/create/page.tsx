@@ -72,10 +72,11 @@ export default function CreatePost() {
                   body: data,
                 }
               ).then((r) => r.json());
+
               postMutation.mutate({
                 title,
                 content,
-                banner: res.url,
+                banner: res.secure_url,
               });
             } catch (e) {}
           }}

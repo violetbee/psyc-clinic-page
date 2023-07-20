@@ -1,0 +1,38 @@
+import Header from '@/components/Header';
+import Quill from '@/components/Quill';
+import prisma from '@/lib/db';
+import Image from 'next/image';
+
+export default async function Page({ params }: { params: { slug: string } }) {
+  const post = await prisma.post.findFirst({
+    where: {
+      slug: params.slug,
+    },
+  });
+
+  return (
+    <div className='container max-w-7xl my-10 mx-auto'>
+      <div className='w-full h-full rounded-md bg-white shadow-md'>
+        <div className='relative'>
+          <Image
+            src={post?.banner || '/images/kinder.jpg'}
+            alt='Post Banner'
+            className='w-full h-60 object-cover rounded-md blur-[2px]'
+            width={500}
+            height={500}
+            draggable={false}
+          />
+          <div className='absolute bottom-0 left-0 p-5'>
+            <h1 className='text-3xl font-bold drop-shadow-sm'>{post?.title}</h1>
+            <p className='text-gray-500 text-sm'>
+              {new Date(post?.createdAt as Date).toLocaleDateString()}
+            </p>
+          </div>
+        </div>
+        <div className='p-5 space-y-3'>
+          <Quill content={post?.content as string} />
+        </div>
+      </div>
+    </div>
+  );
+}

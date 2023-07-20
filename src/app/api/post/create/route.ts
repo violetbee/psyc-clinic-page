@@ -1,6 +1,7 @@
 import prisma from '@/lib/db';
 import { NextResponse } from 'next/server';
 import { getAuthSession } from '@/lib/auth';
+import { slugify } from '@/lib/utils';
 
 export async function POST(req: Request) {
   try {
@@ -19,6 +20,7 @@ export async function POST(req: Request) {
         title: body.title,
         content: body.content,
         banner: body.banner,
+        slug: slugify(body.title),
       },
     });
 
