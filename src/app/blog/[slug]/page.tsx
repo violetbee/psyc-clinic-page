@@ -43,7 +43,9 @@ export default async function Page({ params }: Props) {
             draggable={false}
           />
           <div className='absolute bottom-0 left-0 p-5'>
-            <h1 className='text-3xl font-bold drop-shadow-sm'>{post?.title}</h1>
+            <h1 className='text-3xl font-bold drop-shadow-sm p-2 bg-[#222] text-white'>
+              {post?.title}
+            </h1>
             <p className='text-gray-500 text-sm'>
               {new Date(post?.createdAt as Date).toLocaleDateString()}
             </p>
