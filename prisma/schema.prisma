@@ -35,4 +35,5 @@ model User {
   emailVerified DateTime?
   image         String?
   posts         Post[]
+  aboutMe       String?   @db.LongText
 }

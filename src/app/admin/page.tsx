@@ -1,7 +1,6 @@
 import AdminPost from '@/components/AdminPost';
 import prisma from '@/lib/db';
 import { Post } from '@prisma/client';
-import axios from 'axios';
 
 export const dynamic = 'force-dynamic';
 export const fetchCache = 'force-no-store';

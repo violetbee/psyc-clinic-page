@@ -1,6 +1,7 @@
 'use client';
 import Link from 'next/link';
 import { signOut } from 'next-auth/react';
+import { BsPlusSquare } from 'react-icons/bs';
 
 export default function RootLayout({
   children,
@@ -21,9 +22,15 @@ export default function RootLayout({
           </div>
           <Link
             href='/admin/create'
-            className='flex items-center px-2 md:px-8 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700'
+            className='hidden items-center px-2 md:px-8 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 lg:flex'
           >
             Yeni Gönderi Ekle
+          </Link>
+          <Link
+            href='/admin/create'
+            className='flex items-center p-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 lg:hidden'
+          >
+            <BsPlusSquare size={20} />
           </Link>
           <div className='flex items-center'>
             <div className='flex space-x-0 md:space-x-4'>
@@ -32,6 +39,12 @@ export default function RootLayout({
                 className='text-gray-500 hover:text-gray-700 hover:bg-gray-100 px-3 py-2 rounded-md text-sm font-medium '
               >
                 Anasayfa
+              </Link>
+              <Link
+                href='/admin/hakkimda'
+                className='text-gray-500 hover:text-gray-700 hover:bg-gray-100 px-3 py-2 rounded-md text-sm font-medium '
+              >
+                Hakkımda
               </Link>
               <button
                 className='text-gray-500 hover:text-gray-700 hover:bg-gray-100 px-3 py-2 rounded-md text-sm font-medium'
