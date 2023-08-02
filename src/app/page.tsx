@@ -6,6 +6,7 @@ import { getAuthSession } from '@/lib/auth';
 import HomePost from '../components/HomePost';
 import prisma from '@/lib/db';
 import type { Post } from '@prisma/client';
+import { BsWhatsapp } from 'react-icons/bs';
 
 export const dynamic = 'force-dynamic';
 export const fetchCache = 'force-no-store';
@@ -21,6 +22,19 @@ export default async function Home() {
 
   return (
     <main className='mx-auto w-full min-h-screen'>
+      {/* whatsapp on left, static */}
+      <a
+        href='https://wa.me/905453074330'
+        target='_blank'
+        rel='noopener noreferrer'
+        className='fixed bottom-3 md:bottom-10 left-3 md:left-10 z-50 hover:bg-green-600 duration-100 bg-black/90 outline-gray-800 outline outline-2 outline-offset-2 text-white p-3 rounded-xl flex items-center justify-center gap-2'
+      >
+        <BsWhatsapp className='w-6 h-6' />
+        <span className='text-sm'>WhatsApp İletişim Hattı</span>
+      </a>
+
+      {/* whatsapp on left, static end */}
+
       <Header />
       <CarouselSection />
       <div
@@ -30,7 +44,7 @@ export default async function Home() {
       </div>
       <section className='lg:container px-4 xl:px-0 lg:max-w-7xl mx-auto my-10'>
         <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
-          <div className='group relative hover:scale-110 mx-auto w-full overflow-hidden bg-gray-800 p-[1px] transition-all duration-300 ease-in-out hover:bg-gradient-to-r hover:from-black hover:via-gray-300 hover:to-black'>
+          <div className='group relative md:hover:scale-110 mx-auto w-full overflow-hidden bg-gray-800 p-[1px] transition-all duration-300 ease-in-out hover:bg-gradient-to-r hover:from-black hover:via-gray-300 hover:to-black'>
             <div className='group-hover:animate-spin-slow invisible absolute -top-40 -bottom-40 left-10 right-10 bg-gradient-to-r from-transparent via-white/90 to-transparent group-hover:visible'></div>
             <div className='relative bg-white p-6 h-full'>
               <div className='space-y-4 flex flex-col items-center justify-center h-full'>
@@ -51,7 +65,7 @@ export default async function Home() {
               </div>
             </div>
           </div>
-          <div className='group hover:scale-110 relative mx-auto w-full overflow-hidden bg-gray-800 p-[1px] transition-all duration-300 ease-in-out hover:bg-gradient-to-r hover:from-black hover:via-gray-300 hover:to-black'>
+          <div className='group md:hover:scale-110 relative mx-auto w-full overflow-hidden bg-gray-800 p-[1px] transition-all duration-300 ease-in-out hover:bg-gradient-to-r hover:from-black hover:via-gray-300 hover:to-black'>
             <div className='group-hover:animate-spin-slow invisible absolute -top-40 -bottom-40 left-10 right-10 bg-gradient-to-r from-transparent via-white/90 to-transparent group-hover:visible'></div>
             <div className='relative bg-white p-6 h-full'>
               <div className='space-y-4 flex flex-col items-center justify-center h-full'>
@@ -77,7 +91,7 @@ export default async function Home() {
               </div>
             </div>
           </div>
-          <div className='group hover:scale-110 relative mx-auto w-full overflow-hidden bg-gray-800 p-[1px] transition-all duration-300 ease-in-out hover:bg-gradient-to-r hover:from-black hover:via-gray-300 hover:to-black'>
+          <div className='group md:hover:scale-110 relative mx-auto w-full overflow-hidden bg-gray-800 p-[1px] transition-all duration-300 ease-in-out hover:bg-gradient-to-r hover:from-black hover:via-gray-300 hover:to-black'>
             <div className='group-hover:animate-spin-slow invisible absolute -top-40 -bottom-40 left-10 right-10 bg-gradient-to-r from-transparent via-white/90 to-transparent group-hover:visible'></div>
             <div className='relative bg-white p-6 h-full'>
               <div className='space-y-4 flex flex-col items-center justify-center h-full'>
