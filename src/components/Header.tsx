@@ -1,13 +1,14 @@
 'use client';
 
 import { Icons } from '@/lib/Icons';
-import { Great_Vibes, Sen } from 'next/font/google';
+import { Great_Vibes, Sen, Cutive } from 'next/font/google';
 import Link from 'next/link';
 import { useState } from 'react';
 
 const greatVibes = Great_Vibes({ subsets: ['latin'], weight: ['400'] });
 
 const sen = Sen({ subsets: ['latin'], weight: ['400'] });
+const mali = Cutive({ subsets: ['latin'], weight: ['400'] });
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,7 +19,7 @@ export const Header = () => {
     >
       {/* Desktop Menu */}
       <div className='flex justify-between lg:container lg:max-w-7xl mx-auto px-4 py-5 lg:pt-10'>
-        <ul className='hidden lg:flex gap-5 mt-3'>
+        <ul className='hidden lg:flex gap-5 mt-3 ml-0'>
           <Link href='/' className='group relative cursor-pointer'>
             Anasayfa
             <div
@@ -51,12 +52,16 @@ export const Header = () => {
         </div>
         <Link
           href='/'
-          className={`relative text-2xl sm:text-4xl lg:text-5xl font-bold leading-6  mt-2 lg:-mt-2 ${greatVibes.className}`}
+          className={`relative text-2xl sm:text-4xl xl:text-5xl font-bold  text-[#222] mt-2 lg:-mt-4 ${greatVibes.className}`}
         >
-          <span className='text-xl'>Uzm. Dr. </span>
-          Mehmet Fatih Kınık
+          Uzm. Dr. Mehmet Fatih Kınık
+          <span
+            className={`text-sm ${mali.className} lg:text-lg text-end lg:text-center block  text-[#444] tracking-tighter`}
+          >
+            Çocuk ve Ergen Ruh Sağlığı Uzmanı
+          </span>
         </Link>
-        <ul className='hidden lg:flex gap-5 mt-3'>
+        <ul className='hidden lg:flex gap-5 mt-3 ml-0'>
           <Link href='#' className='group relative cursor-pointer'>
             Duyurular
             <div
