@@ -44,7 +44,7 @@ export default async function Home() {
       </div>
       <section className='lg:container px-4 xl:px-0 lg:max-w-7xl mx-auto my-10'>
         <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
-          <div className='group relative md:hover:scale-110 mx-auto w-full overflow-hidden bg-gray-800 p-[1px] transition-all duration-300 ease-in-out hover:bg-gradient-to-r hover:from-black hover:via-gray-300 hover:to-black'>
+          <div className='group relative md:hover:scale-105 mx-auto w-full overflow-hidden bg-gray-800 p-[1px] transition-all duration-300 ease-in-out hover:bg-gradient-to-r hover:from-black hover:via-gray-300 hover:to-black'>
             <div className='group-hover:animate-spin-slow invisible absolute -top-40 -bottom-40 left-10 right-10 bg-gradient-to-r from-transparent via-white/90 to-transparent group-hover:visible'></div>
             <div className='relative bg-white p-6 h-full'>
               <div className='space-y-4 flex flex-col items-center justify-center h-full'>
@@ -65,7 +65,7 @@ export default async function Home() {
               </div>
             </div>
           </div>
-          <div className='group md:hover:scale-110 relative mx-auto w-full overflow-hidden bg-gray-800 p-[1px] transition-all duration-300 ease-in-out hover:bg-gradient-to-r hover:from-black hover:via-gray-300 hover:to-black'>
+          <div className='group md:hover:scale-105 relative mx-auto w-full overflow-hidden bg-gray-800 p-[1px] transition-all duration-300 ease-in-out hover:bg-gradient-to-r hover:from-black hover:via-gray-300 hover:to-black'>
             <div className='group-hover:animate-spin-slow invisible absolute -top-40 -bottom-40 left-10 right-10 bg-gradient-to-r from-transparent via-white/90 to-transparent group-hover:visible'></div>
             <div className='relative bg-white p-6 h-full'>
               <div className='space-y-4 flex flex-col items-center justify-center h-full'>
@@ -91,7 +91,7 @@ export default async function Home() {
               </div>
             </div>
           </div>
-          <div className='group md:hover:scale-110 relative mx-auto w-full overflow-hidden bg-gray-800 p-[1px] transition-all duration-300 ease-in-out hover:bg-gradient-to-r hover:from-black hover:via-gray-300 hover:to-black'>
+          <div className='group md:hover:scale-105 relative mx-auto w-full overflow-hidden bg-gray-800 p-[1px] transition-all duration-300 ease-in-out hover:bg-gradient-to-r hover:from-black hover:via-gray-300 hover:to-black'>
             <div className='group-hover:animate-spin-slow invisible absolute -top-40 -bottom-40 left-10 right-10 bg-gradient-to-r from-transparent via-white/90 to-transparent group-hover:visible'></div>
             <div className='relative bg-white p-6 h-full'>
               <div className='space-y-4 flex flex-col items-center justify-center h-full'>
