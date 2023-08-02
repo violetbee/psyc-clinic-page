@@ -89,7 +89,7 @@ export default function Iletisim() {
                   height='450'
                   loading='lazy'
                   referrerPolicy='no-referrer-when-downgrade'
-                  className='mt-4'
+                  className='w-full h-96'
                 ></iframe>
               </div>
             </div>
