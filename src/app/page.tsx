@@ -26,47 +26,78 @@ export default async function Home() {
       <div
         className={`bg-black text-white h-32 flex items-center justify-center text-3xl lg:text-5xl ${pacifico.className}`}
       >
-        Terapi Yöntemleri
+        Hizmetlerimiz
       </div>
-      <section className='lg:container px-4 xl:px-0 lg:max-w-7xl mx-auto mt-5'>
-        <div className='grid grid-cols-1 lg:grid-cols-3 gap-5'>
-          <div className='h-40 w-full flex justify-end border-[1px] relative overflow-hidden'>
-            <div className='w-8/12 flex justify-center gap-2 flex-col'>
-              <h1 className='font-semibold text-2xl'>Örnek Başlık</h1>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Ducimus, at dolore earum.
-              </p>
+      <section className='lg:container px-4 xl:px-0 lg:max-w-7xl mx-auto my-10'>
+        <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
+          <div className='group relative mx-auto w-full overflow-hidden bg-gray-800 p-[1px] transition-all duration-300 ease-in-out hover:bg-gradient-to-r hover:from-black hover:via-gray-300 hover:to-black'>
+            <div className='group-hover:animate-spin-slow invisible absolute -top-40 -bottom-40 left-10 right-10 bg-gradient-to-r from-transparent via-white/90 to-transparent group-hover:visible'></div>
+            <div className='relative bg-white p-6'>
+              <div className='space-y-4'>
+                <img
+                  src='https://www.svgrepo.com/show/310892/group.svg'
+                  alt=''
+                  className='w-32 h-32 mx-auto'
+                />
+                <p className='text-lg font-semibold text-slate-800'>
+                  Online Terapi ve Danışmanlık
+                </p>
+                <p className='font-md text-slate-500 text-justify'>
+                  Psikolojik danışmanlık ve psikoterapi hizmetlerimizi online
+                  olarak da vermekteyiz. Online terapi ve danışmanlık
+                  hizmetlerimiz, yüz yüze görüşme yapamayacak durumda olan
+                  kişiler için uygundur.
+                </p>
+              </div>
             </div>
-            {/* brain svg */}
-            <Icons.brain className='absolute opacity-40 -bottom-10 -left-20 w-40 h-40' />
           </div>
-          <div className='h-40 w-full flex justify-end border-[1px] relative overflow-hidden'>
-            <div className='w-8/12 flex justify-center gap-2 flex-col'>
-              <h1 className='font-semibold text-2xl'>Örnek Başlık</h1>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Ducimus, at dolore earum.
-              </p>
+          <div className='group z-10 lg:scale-110 relative mx-auto w-full overflow-hidden bg-gray-800 p-[1px] transition-all duration-300 ease-in-out hover:bg-gradient-to-r hover:from-black hover:via-gray-300 hover:to-black'>
+            <div className='group-hover:animate-spin-slow invisible absolute -top-40 -bottom-40 left-10 right-10 bg-gradient-to-r from-transparent via-white/90 to-transparent group-hover:visible'></div>
+            <div className='relative bg-white p-6 h-full'>
+              <div className='space-y-4'>
+                <img
+                  className='w-32 h-32 mx-auto'
+                  src='https://www.svgrepo.com/show/446364/tick.svg'
+                  alt=''
+                />
+                <p className='text-lg font-semibold text-slate-800'>
+                  Uzmanlık Alanlarımız
+                </p>
+                <p className='font-md text-slate-500 text-justify'>
+                  Yeme bozuklukları, depresyon, anksiyete bozuklukları, panik
+                  bozukluk, sosyal fobi, travma sonrası stres bozukluğu, obsesif
+                  kompulsif bozukluk
+                </p>
+              </div>
             </div>
-            {/* brain svg */}
-            <Icons.doctor className='absolute opacity-40 -bottom-10 -left-10 w-40 h-40' />
           </div>
-          <div className='h-40 w-full flex justify-end border-[1px] relative overflow-hidden'>
-            <div className='w-8/12 flex justify-center gap-2 flex-col'>
-              <h1 className='font-semibold text-2xl'>Örnek Başlık</h1>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Ducimus, at dolore earum.
-              </p>
+          <div className='group relative mx-auto w-full overflow-hidden bg-gray-800 p-[1px] transition-all duration-300 ease-in-out hover:bg-gradient-to-r hover:from-black hover:via-gray-300 hover:to-black'>
+            <div className='group-hover:animate-spin-slow invisible absolute -top-40 -bottom-40 left-10 right-10 bg-gradient-to-r from-transparent via-white/90 to-transparent group-hover:visible'></div>
+            <div className='relative bg-white p-6 h-full'>
+              <div className='space-y-4'>
+                <img
+                  src='https://www.svgrepo.com/show/126095/medical-heart-scan.svg'
+                  className='w-32 h-32 mx-auto'
+                  alt=''
+                />
+                <p className='text-lg font-semibold text-slate-800'>
+                  Terapi ve Tedavi Yöntemlerimiz
+                </p>
+                <p className='font-md text-slate-500 text-justify'>
+                  Bilişsel Davranışçı Terapi, Şema Terapi, Duygusal Odaklı
+                  Terapi, Çözüm Odaklı Terapi, Kabul ve Kararlılık Terapisi,
+                  EMDR ve EFT gibi yöntemlerle çalışmaktayız.
+                </p>
+              </div>
             </div>
-            {/* brain svg */}
-            <Icons.monitor className='absolute opacity-40 -bottom-10 -left-10 w-40 h-40' />
           </div>
         </div>
       </section>
       <section className='lg:container lg:max-w-7xl mx-auto mt-5 px-4 xl:px-0'>
-        <h1 className='text-3xl mt-4 font-bold'>Yazılar</h1>
+        <div className='w-full flex items-center mt-4 gap-6'>
+          <h1 className='text-3xl font-bold'>Yazılar</h1>
+          <span className='h-[1px] w-full bg-black/10' />
+        </div>
         <div className='grid grid-cols-1 mt-6 lg:grid-cols-3 gap-5'>
           {posts?.map((post: Post) => (
             <HomePost key={post.id} post={post} />

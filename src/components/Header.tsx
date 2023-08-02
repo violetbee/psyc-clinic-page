@@ -14,7 +14,7 @@ export const Header = () => {
 
   return (
     <header
-      className={`bg-white w-full border-b-[1px] sticky z-10 top-0  ${sen.className}`}
+      className={`bg-white w-full border-b-[1px] sticky z-20 top-0  ${sen.className}`}
     >
       {/* Desktop Menu */}
       <div className='flex justify-between lg:container lg:max-w-7xl mx-auto px-4 py-5 lg:pt-10'>
