@@ -71,7 +71,7 @@ export const Header = () => {
             ease-in-out'
             ></div>
           </Link>
-          <Link href='#' className='group relative cursor-pointer'>
+          <Link href='/iletisim' className='group relative cursor-pointer'>
             İletişim
             <div
               className='absolute w-full h-[2px] bg-gray-950 -bottom-1 left-0 transform scale-x-0 group-hover:scale-x-75 transition duration-300
@@ -129,7 +129,10 @@ export const Header = () => {
             ease-in-out'
             ></div>
           </Link>
-          <Link href='#' className='group relative cursor-pointer text-3xl'>
+          <Link
+            href='/iletisim'
+            className='group relative cursor-pointer text-3xl'
+          >
             İletişim
             <div
               className='absolute w-full h-[2px] bg-gray-950 -bottom-1 left-0 transform scale-x-0 group-hover:scale-x-75 transition duration-300

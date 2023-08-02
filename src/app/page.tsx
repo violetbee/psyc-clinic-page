@@ -32,8 +32,8 @@ export default async function Home() {
         <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
           <div className='group relative hover:scale-110 mx-auto w-full overflow-hidden bg-gray-800 p-[1px] transition-all duration-300 ease-in-out hover:bg-gradient-to-r hover:from-black hover:via-gray-300 hover:to-black'>
             <div className='group-hover:animate-spin-slow invisible absolute -top-40 -bottom-40 left-10 right-10 bg-gradient-to-r from-transparent via-white/90 to-transparent group-hover:visible'></div>
-            <div className='relative bg-white p-6'>
-              <div className='space-y-4'>
+            <div className='relative bg-white p-6 h-full'>
+              <div className='space-y-4 flex flex-col items-center justify-center h-full'>
                 <img
                   src='https://www.svgrepo.com/show/310892/group.svg'
                   alt=''
@@ -42,7 +42,7 @@ export default async function Home() {
                 <p className='text-lg font-semibold text-slate-800'>
                   Online Terapi ve Danışmanlık
                 </p>
-                <p className='font-md text-slate-500 text-justify'>
+                <p className='font-md text-sm text-slate-500 text-justify'>
                   Psikolojik danışmanlık ve psikoterapi hizmetlerimizi online
                   olarak da vermekteyiz. Online terapi ve danışmanlık
                   hizmetlerimiz, yüz yüze görüşme yapamayacak durumda olan
@@ -54,7 +54,7 @@ export default async function Home() {
           <div className='group hover:scale-110 relative mx-auto w-full overflow-hidden bg-gray-800 p-[1px] transition-all duration-300 ease-in-out hover:bg-gradient-to-r hover:from-black hover:via-gray-300 hover:to-black'>
             <div className='group-hover:animate-spin-slow invisible absolute -top-40 -bottom-40 left-10 right-10 bg-gradient-to-r from-transparent via-white/90 to-transparent group-hover:visible'></div>
             <div className='relative bg-white p-6 h-full'>
-              <div className='space-y-4'>
+              <div className='space-y-4 flex flex-col items-center justify-center h-full'>
                 <img
                   className='w-32 h-32 mx-auto'
                   src='https://www.svgrepo.com/show/446364/tick.svg'
@@ -63,10 +63,16 @@ export default async function Home() {
                 <p className='text-lg font-semibold text-slate-800'>
                   Uzmanlık Alanlarımız
                 </p>
-                <p className='font-md text-slate-500 text-justify'>
-                  Yeme bozuklukları, depresyon, anksiyete bozuklukları, panik
-                  bozukluk, sosyal fobi, travma sonrası stres bozukluğu, obsesif
-                  kompulsif bozukluk
+                <p className='font-md text-sm text-slate-500 text-justify'>
+                  {`Dikkat Eksikliği Hiperaktivite Bozukluğu, Özgül Öğrenme
+                  Bozukluğu, Otizm Spektrum Bozukluğu, Yıkıcı Duygu Durumu
+                  Düzenleyememe Bozukluğu, Karşıt Olma Karşı Gelme Bozukluğu,
+                  Davranım Bozukluğu, Uyku Bozuklukları, Tik Bozuklukları, Panik
+                  Bozukluk, Trikotillomani, Travma Sonrası Stres Bozukluğu,
+                  Yaygın Anksiyete Bozukluğu, Ayrılık Kaygısı Bozukluğu, Obsesif
+                  Kompulsif Bozukluk, Toplumsal Kaygı Bozukluğu, Şizofreni,
+                  Enürezis ve Enkoprezis, Çocukluk Çağı Depresyonu, Bipolar
+                  Bozukluk, Kardeş Kıskançlığı.`}
                 </p>
               </div>
             </div>
@@ -74,7 +80,7 @@ export default async function Home() {
           <div className='group hover:scale-110 relative mx-auto w-full overflow-hidden bg-gray-800 p-[1px] transition-all duration-300 ease-in-out hover:bg-gradient-to-r hover:from-black hover:via-gray-300 hover:to-black'>
             <div className='group-hover:animate-spin-slow invisible absolute -top-40 -bottom-40 left-10 right-10 bg-gradient-to-r from-transparent via-white/90 to-transparent group-hover:visible'></div>
             <div className='relative bg-white p-6 h-full'>
-              <div className='space-y-4'>
+              <div className='space-y-4 flex flex-col items-center justify-center h-full'>
                 <img
                   src='https://www.svgrepo.com/show/126095/medical-heart-scan.svg'
                   className='w-32 h-32 mx-auto'
@@ -83,7 +89,7 @@ export default async function Home() {
                 <p className='text-lg font-semibold text-slate-800'>
                   Terapi ve Tedavi Yöntemlerimiz
                 </p>
-                <p className='font-md text-slate-500 text-justify'>
+                <p className='font-md text-sm text-slate-500 text-justify'>
                   Bilişsel Davranışçı Terapi, Şema Terapi, Duygusal Odaklı
                   Terapi, Çözüm Odaklı Terapi, Kabul ve Kararlılık Terapisi,
                   EMDR ve EFT gibi yöntemlerle çalışmaktayız.
