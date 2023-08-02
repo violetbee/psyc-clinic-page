@@ -93,6 +93,19 @@ export default async function Home() {
           </div>
         </div>
       </section>
+      {/* <section
+        id='pdf-galeri'
+        className='lg:container lg:max-w-7xl mx-auto mt-5 px-4 xl:px-0'
+      >
+        <div className='w-full flex items-center mt-4 gap-6'>
+          <h1 className='text-3xl font-bold'>Sertifikalarım</h1>
+
+          <span className='h-[1px] w-full bg-black/10' />
+        </div>
+        <div className='grid grid-cols-1 mt-6 lg:grid-cols-3 gap-5'>
+         
+        </div>
+      </section> */}
       <section
         id='yazilar'
         className='lg:container lg:max-w-7xl mx-auto mt-5 px-4 xl:px-0'
@@ -107,6 +120,7 @@ export default async function Home() {
           ))}
         </div>
       </section>
+
       <footer className='h-40 w-full bg-[#333] mt-20'>
         <div className='lg:container lg:max-w-7xl mx-auto px-4 lg:px-0 h-full flex items-center justify-between'>
           <div className='flex items-center gap-5'>
