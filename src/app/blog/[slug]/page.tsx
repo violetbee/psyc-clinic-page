@@ -1,5 +1,6 @@
 import Quill from '@/components/Quill';
 import prisma from '@/lib/db';
+import { removeHtmlTags } from '@/lib/utils';
 import { Metadata } from 'next';
 import Image from 'next/image';
 
@@ -19,7 +20,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: post?.title + ' | Uzm. Dr. Mehmet Fatih Kınık',
     description:
-      post?.content?.slice(0, 50) + (post?.content?.length! > 50 ? '...' : ''),
+      removeHtmlTags(post?.content?.slice(0, 50) as string) +
+      (post?.content?.length! > 50 ? '...' : ''),
   };
 }
 
@@ -37,7 +39,7 @@ export default async function Page({ params }: Props) {
           <Image
             src={post?.banner || '/images/kinder.jpg'}
             alt='Post Banner'
-            className='w-full h-60 object-cover rounded-md blur-[2px]'
+            className='w-full h-60 object-cover rounded-md blur-[1px]'
             width={500}
             height={500}
             draggable={false}
@@ -46,7 +48,7 @@ export default async function Page({ params }: Props) {
             <h1 className='text-3xl font-bold drop-shadow-sm p-2 bg-[#222] text-white'>
               {post?.title}
             </h1>
-            <p className='text-gray-500 text-sm'>
+            <p className='text-gray-800 text-sm'>
               {new Date(post?.createdAt as Date).toLocaleDateString()}
             </p>
           </div>
