@@ -54,7 +54,7 @@ export const Header = () => {
           href='/'
           className={`relative text-2xl sm:text-4xl xl:text-5xl font-bold  text-[#222] mt-2 lg:-mt-4 ${greatVibes.className}`}
         >
-          Uzm. Dr. Mehmet Fatih Kınık
+          <span className='text-2xl'>Uzm. Dr.</span> Mehmet Fatih Kınık
           <span
             className={`text-sm ${mali.className} lg:text-lg text-end lg:text-center block  text-[#444] tracking-tighter`}
           >
@@ -92,7 +92,7 @@ export const Header = () => {
           isMenuOpen ? 'h-[calc(100vh-70px)]' : 'h-0'
         } bg-white border-b-[1px] overflow-hidden w-full absolute z-[999] duration-300`}
       >
-        <ul className='flex h-full flex-col items-center justify-start gap-20 mt-4 '>
+        <ul className='flex h-full flex-col items-center justify-start gap-16 mt-4 '>
           <Link href='/' className='group relative cursor-pointer text-3xl'>
             Anasayfa
             <div
