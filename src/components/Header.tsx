@@ -58,7 +58,7 @@ export const Header = () => {
           <span
             className={`text-sm ${mali.className} lg:text-lg text-end lg:text-center block  text-[#444] tracking-tighter`}
           >
-            Çocuk ve Ergen Ruh Sağlığı Uzmanı
+            Çocuk ve Genç Psikiyatri Uzmanı
           </span>
         </Link>
         <ul className='hidden lg:flex gap-5 mt-3 ml-0'>
