@@ -9,3 +9,18 @@
     margin-left: 2rem;
   }
 }
+
+.box {
+  width: 40px;
+  height: 40px;
+}
+
+.red {
+  background-color: red;
+}
+.blue {
+  background-color: blue;
+}
+.purple {
+  background-color: purple;
+}

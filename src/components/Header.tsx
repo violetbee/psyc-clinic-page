@@ -1,13 +1,14 @@
 'use client';
 
 import { Icons } from '@/lib/Icons';
-import { Great_Vibes, Sen } from 'next/font/google';
+import { Great_Vibes, Sen, Cutive } from 'next/font/google';
 import Link from 'next/link';
 import { useState } from 'react';
 
 const greatVibes = Great_Vibes({ subsets: ['latin'], weight: ['400'] });
 
 const sen = Sen({ subsets: ['latin'], weight: ['400'] });
+const mali = Cutive({ subsets: ['latin'], weight: ['400'] });
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,7 +19,7 @@ export const Header = () => {
     >
       {/* Desktop Menu */}
       <div className='flex justify-between lg:container lg:max-w-7xl mx-auto px-4 py-5 lg:pt-10'>
-        <ul className='hidden lg:flex gap-5 mt-3'>
+        <ul className='hidden lg:flex gap-5 mt-3 ml-0'>
           <Link href='/' className='group relative cursor-pointer'>
             Anasayfa
             <div
@@ -34,7 +35,7 @@ export const Header = () => {
             ease-in-out'
             ></div>
           </Link>
-          <Link href='#yazilar' className='group relative cursor-pointer'>
+          <Link href='/#yazilar' className='group relative cursor-pointer'>
             Yazılar
             <div
               className='absolute w-full h-[2px] bg-gray-950 -bottom-1 left-0 transform scale-x-0 group-hover:scale-x-75 transition duration-300
@@ -51,12 +52,16 @@ export const Header = () => {
         </div>
         <Link
           href='/'
-          className={`relative text-2xl sm:text-4xl lg:text-5xl font-bold leading-6  mt-2 lg:-mt-2 ${greatVibes.className}`}
+          className={`relative text-2xl sm:text-4xl xl:text-5xl font-bold  text-[#222] mt-2 lg:-mt-4 ${greatVibes.className}`}
         >
-          <span className='text-xl'>Uzm. Dr. </span>
-          Mehmet Fatih Kınık
+          <span className='text-2xl'>Uzm. Dr.</span> Mehmet Fatih Kınık
+          <span
+            className={`text-sm ${mali.className} lg:text-lg text-end lg:text-center block  text-[#444] tracking-tighter`}
+          >
+            Çocuk ve Genç Psikiyatri Uzmanı
+          </span>
         </Link>
-        <ul className='hidden lg:flex gap-5 mt-3'>
+        <ul className='hidden lg:flex gap-5 mt-3 ml-0'>
           <Link href='#' className='group relative cursor-pointer'>
             Duyurular
             <div
@@ -71,7 +76,7 @@ export const Header = () => {
             ease-in-out'
             ></div>
           </Link>
-          <Link href='#' className='group relative cursor-pointer'>
+          <Link href='/iletisim' className='group relative cursor-pointer'>
             İletişim
             <div
               className='absolute w-full h-[2px] bg-gray-950 -bottom-1 left-0 transform scale-x-0 group-hover:scale-x-75 transition duration-300
@@ -87,7 +92,7 @@ export const Header = () => {
           isMenuOpen ? 'h-[calc(100vh-70px)]' : 'h-0'
         } bg-white border-b-[1px] overflow-hidden w-full absolute z-[999] duration-300`}
       >
-        <ul className='flex h-full flex-col items-center justify-start gap-20 mt-4 '>
+        <ul className='flex h-full flex-col items-center justify-start gap-16 mt-4 '>
           <Link href='/' className='group relative cursor-pointer text-3xl'>
             Anasayfa
             <div
@@ -106,7 +111,7 @@ export const Header = () => {
             ></div>
           </Link>
           <Link
-            href='#yazilar'
+            href='/#yazilar'
             className='group relative cursor-pointer text-3xl'
           >
             Yazılar
@@ -129,7 +134,10 @@ export const Header = () => {
             ease-in-out'
             ></div>
           </Link>
-          <Link href='#' className='group relative cursor-pointer text-3xl'>
+          <Link
+            href='/iletisim'
+            className='group relative cursor-pointer text-3xl'
+          >
             İletişim
             <div
               className='absolute w-full h-[2px] bg-gray-950 -bottom-1 left-0 transform scale-x-0 group-hover:scale-x-75 transition duration-300
