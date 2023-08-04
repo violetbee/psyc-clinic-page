@@ -104,9 +104,9 @@ export default async function Home() {
                   Terapi ve Tedavi Yöntemlerimiz
                 </p>
                 <p className='font-md text-sm text-slate-500 text-justify'>
-                  Bilişsel Davranışçı Terapi, Şema Terapi, Duygusal Odaklı
-                  Terapi, Çözüm Odaklı Terapi, Kabul ve Kararlılık Terapisi,
-                  EMDR ve EFT gibi yöntemlerle çalışmaktayız.
+                  Bilişsel Davranışçı Terapi, EMDR, Psikanalitik Yönelimli
+                  Psikoterapi, Oyun Terapisi, Aile Terapisi, Motivasyonel
+                  Terapi, İlaç Tedavisi, Psikometrik Değerlendirme.
                 </p>
               </div>
             </div>
