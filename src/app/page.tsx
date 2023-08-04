@@ -60,7 +60,8 @@ export default async function Home() {
                   Psikolojik danışmanlık ve psikoterapi hizmetlerimizi online
                   olarak da vermekteyiz. Online terapi ve danışmanlık
                   hizmetlerimiz, yüz yüze görüşme yapamayacak durumda olan
-                  kişiler için uygundur.
+                  kişiler için uygundur. Online olarak hizmet almak için bizi
+                  arayabilirsiniz.
                 </p>
               </div>
             </div>
