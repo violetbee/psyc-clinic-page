@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
   });
   return {
-    title: post?.title + ' | Uzm. Dr. Mehmet Fatih Kınık',
+    title: post?.title + ' - Blog',
     description:
       removeHtmlTags(post?.content?.slice(0, 50) as string) +
       (post?.content?.length! > 50 ? '...' : ''),
