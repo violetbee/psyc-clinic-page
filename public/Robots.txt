@@ -1,0 +1,11 @@
+# Block all crawlers for /accounts
+User-agent: *
+Disallow: /admin
+Disallow: /sign-in
+
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+Sitemap: https://drmehmetfatihkinik.com/sitemap.xml
+Sitemap: https://www.drmehmetfatihkinik.com/sitemap.xml
