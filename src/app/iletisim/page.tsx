@@ -1,5 +1,3 @@
-import { Quill } from 'react-quill';
-
 export default function Iletisim() {
   return (
     <div className='container max-w-7xl my-10 mx-auto'>

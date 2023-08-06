@@ -11,7 +11,8 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Uzm. Dr. Mehmet Fatih Kınık | Çocuk ve Ergen Psikiyatristi',
-  description: 'Çocuk ve Ergen Psikiyatristi Uzm. Dr. Mehmet Fatih Kınık',
+  description:
+    'Çocuk ve Ergen Psikiyatristi Uzm. Dr. Mehmet Fatih Kınık, Ordu Çocuk ve Genç Psikiyatristi, Giresun Çocuk ve Genç Psikiyatristi, Ordu, Giresun, Ergen ve Çocuk Psikiyatristi',
 };
 
 export default function RootLayout({
