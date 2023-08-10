@@ -56,6 +56,20 @@ export const CarouselSection = () => {
           src='/images/ofis-3.jpg'
           alt='Uzm. Dr. Mehmet Fatih Kınık'
         />
+        <Image
+          width={2000}
+          height={3000}
+          className='h-[400px] lg:h-[780px] 3xl:h-[1000px] object-cover object-center'
+          src='/images/ofis-4.jpg'
+          alt='Uzm. Dr. Mehmet Fatih Kınık'
+        />
+        <Image
+          width={2000}
+          height={3000}
+          className='h-[400px] lg:h-[780px] 3xl:h-[1000px] object-cover object-center'
+          src='/images/ofis-5.jpg'
+          alt='Uzm. Dr. Mehmet Fatih Kınık'
+        />
       </Carousel>
     </section>
   );
