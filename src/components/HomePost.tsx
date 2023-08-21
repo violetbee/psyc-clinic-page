@@ -7,15 +7,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export default function HomePost({ post }: { post: Post }) {
-  const posts = useQuery({
-    queryKey: ['posts'],
-    queryFn: async () => {
-      const res = await fetch('/api/post/get-all');
-      return res.json();
-    },
-    initialData: post,
-  });
-
   return (
     <div key={post.id} className='bg-white rounded-md shadow-md'>
       {post.banner ? (

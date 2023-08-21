@@ -8,7 +8,6 @@ import type { Post } from '@prisma/client';
 import { BsWhatsapp } from 'react-icons/bs';
 import Link from 'next/link';
 import Certificates from '@/components/Certificates';
-import fs from 'fs';
 
 export const dynamic = 'force-dynamic';
 export const fetchCache = 'force-no-store';
@@ -21,10 +20,6 @@ export default async function Home() {
       createdAt: 'desc',
     },
   });
-
-  const images = fs
-    .readdirSync('/images/certificates')
-    .map((image) => `/images/certificates/${image}`);
 
   return (
     <main className='mx-auto w-full min-h-screen'>
@@ -121,7 +116,7 @@ export default async function Home() {
         </div>
       </section>
 
-      <Certificates images={images} />
+      <Certificates />
 
       <section
         id='yazilar'

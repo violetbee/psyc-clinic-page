@@ -3,7 +3,7 @@ import { Carousel } from 'react-responsive-carousel';
 import { useRef } from 'react';
 import Image from 'next/image';
 
-export default function Certificates({ images }: { images: string[] }) {
+export default function Certificates() {
   const carouselRef = useRef<HTMLElement>(null);
 
   return (
@@ -36,25 +36,25 @@ export default function Certificates({ images }: { images: string[] }) {
           autoPlay={true}
           interval={5000}
           renderThumbs={() => {
-            return images.map((image, idx) => (
+            return Array.from({ length: 21 }).map((image, idx) => (
               <Image
                 key={idx}
                 width={200}
                 height={200}
                 className='h-20 w-20 object-cover object-center'
-                src={image}
+                src={'/images/certificates/' + (idx + 1) + '.jpg'}
                 alt='Uzm. Dr. Mehmet Fatih Kınık'
               />
             ));
           }}
         >
-          {images.map((image, idx) => (
+          {Array.from({ length: 21 }).map((image, idx) => (
             <Image
               key={idx}
               width={800}
               height={900}
               className='h-[400px] xl:h-[500px] 3xl:h-[600px] object-contain object-center'
-              src={image}
+              src={'/images/certificates/' + (idx + 1) + '.jpg'}
               alt='Sertifikalarım'
             />
           ))}
