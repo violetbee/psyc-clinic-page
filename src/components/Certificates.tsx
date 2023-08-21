@@ -12,9 +12,10 @@ export default function Certificates() {
       className='lg:container lg:max-w-7xl mx-auto mt-5 px-4 xl:px-0'
     >
       <div className='w-full flex items-center mt-4 gap-6'>
-        <h1 className='text-3xl font-bold'>Sertifikalarım</h1>
-
-        <span className='h-[1px] w-full bg-black/10' />
+        <p className='text-xl md:text-3xl font-bold'>
+          Sertifikalarım & Katıldığım Kongreler
+        </p>
+        <span className='h-[1px] flex-1 bg-black/10' />
       </div>
       <div
         onMouseDown={() => {
