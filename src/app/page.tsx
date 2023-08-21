@@ -2,7 +2,6 @@ import CarouselSection from '@/components/CarouselSection';
 import Header from '@/components/Header';
 import { Icons } from '@/lib/Icons';
 import { Pacifico } from 'next/font/google';
-import { getAuthSession } from '@/lib/auth';
 import HomePost from '../components/HomePost';
 import prisma from '@/lib/db';
 import type { Post } from '@prisma/client';
@@ -24,7 +23,7 @@ export default async function Home() {
   });
 
   const images = fs
-    .readdirSync('public/images/certificates')
+    .readdirSync('/images/certificates')
     .map((image) => `/images/certificates/${image}`);
 
   return (

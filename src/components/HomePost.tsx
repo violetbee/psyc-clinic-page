@@ -34,7 +34,7 @@ export default function HomePost({ post }: { post: Post }) {
       )}
       <Link href={`/blog/${post.slug}`}>
         <div className='p-5 space-y-3'>
-          <h1 className='text-xl font-bold'>&quot;{post.title}&quot;</h1>
+          <h2 className='text-xl font-bold'>&quot;{post.title}&quot;</h2>
           <p className='text-gray-500 text-sm'>
             {removeHtmlTags(
               post.content!.slice(0, 100) +

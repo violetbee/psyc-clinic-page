@@ -12,7 +12,21 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: 'Uzm. Dr. Mehmet Fatih Kınık | Çocuk ve Ergen Psikiyatristi',
   description:
-    'Çocuk ve Ergen Psikiyatristi Uzm. Dr. Mehmet Fatih Kınık, Ordu Çocuk ve Genç Psikiyatristi, Giresun Çocuk ve Genç Psikiyatristi, Ordu, Giresun, Ergen ve Çocuk Psikiyatristi',
+    'Çocuk ve Ergen Psikiyatristi Uzm. Dr. Mehmet Fatih Kınık, Ordu Çocuk ve Genç Psikiyatristi, Giresun Çocuk ve Genç Psikiyatristi',
+  keywords: [
+    'Çocuk Psikiyatristi',
+    'Ergen Psikiyatristi',
+    'Çocuk ve Ergen Psikiyatristi',
+    'Çocuk Psikiyatristi Ordu',
+    'Ergen Psikiyatristi Ordu',
+    'Çocuk ve Ergen Psikiyatristi Ordu',
+    'Ordu Çocuk Psikiyatristi',
+    'Ordu Ergen Psikiyatristi',
+    'Ordu Çocuk ve Ergen Psikiyatristi',
+    'Çocuk Psikiyatristi Giresun',
+    'Ergen Psikiyatristi Giresun',
+    'Çocuk ve Ergen Psikiyatristi Giresun',
+  ],
 };
 
 export default function RootLayout({
@@ -21,7 +35,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='en'>
+    <html lang='tr'>
       <Script id='google-tag-manager' strategy='afterInteractive'>
         {`
         (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
