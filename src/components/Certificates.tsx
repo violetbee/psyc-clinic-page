@@ -49,7 +49,7 @@ export default function Certificates() {
             ));
           }}
         >
-          {Array.from({ length: 21 }).map((image, idx) => (
+          {Array.from({ length: 22 }).map((image, idx) => (
             <Image
               key={idx}
               width={800}
