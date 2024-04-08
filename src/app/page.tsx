@@ -2,11 +2,12 @@ import CarouselSection from '@/components/CarouselSection';
 import Header from '@/components/Header';
 import { Icons } from '@/lib/Icons';
 import { Pacifico } from 'next/font/google';
-import { getAuthSession } from '@/lib/auth';
 import HomePost from '../components/HomePost';
 import prisma from '@/lib/db';
 import type { Post } from '@prisma/client';
 import { BsWhatsapp } from 'react-icons/bs';
+import Link from 'next/link';
+import Certificates from '@/components/Certificates';
 
 export const dynamic = 'force-dynamic';
 export const fetchCache = 'force-no-store';
@@ -114,19 +115,9 @@ export default async function Home() {
           </div>
         </div>
       </section>
-      {/* <section
-        id='pdf-galeri'
-        className='lg:container lg:max-w-7xl mx-auto mt-5 px-4 xl:px-0'
-      >
-        <div className='w-full flex items-center mt-4 gap-6'>
-          <h1 className='text-3xl font-bold'>Sertifikalarım</h1>
 
-          <span className='h-[1px] w-full bg-black/10' />
-        </div>
-        <div className='grid grid-cols-1 mt-6 lg:grid-cols-3 gap-5'>
-         
-        </div>
-      </section> */}
+      <Certificates />
+
       <section
         id='yazilar'
         className='lg:container lg:max-w-7xl mx-auto mt-5 px-4 xl:px-0'
@@ -155,11 +146,13 @@ export default async function Home() {
               </p>
             </div>
           </div>
-          <div className='flex items-center gap-5'>
-            <Icons.facebook className='w-10 h-10' />
-            <Icons.twitter className='w-10 h-10' />
+          <Link
+            href='https://www.instagram.com/mehmetfatihkinik/'
+            className='flex items-center gap-5'
+            target='_blank'
+          >
             <Icons.instagram className='w-10 h-10' />
-          </div>
+          </Link>
         </div>
       </footer>
     </main>

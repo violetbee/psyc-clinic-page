@@ -10,9 +10,45 @@ const GTM_ID = 'GTM-5Q5J2JMP';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Uzm. Dr. Mehmet Fatih Kınık | Çocuk ve Ergen Psikiyatristi',
+  title:
+    'Uzm. Dr. Mehmet Fatih Kınık - Ordu Giresun Çocuk Ergen Psikiyatri Uzmanı',
+  applicationName: 'Uzm. Dr. Mehmet Fatih Kınık',
   description:
-    'Çocuk ve Ergen Psikiyatristi Uzm. Dr. Mehmet Fatih Kınık, Ordu Çocuk ve Genç Psikiyatristi, Giresun Çocuk ve Genç Psikiyatristi, Ordu, Giresun, Ergen ve Çocuk Psikiyatristi',
+    'Çocuk ve Ergen Psikiyatristi Uzm. Dr. Mehmet Fatih Kınık, Ordu Çocuk ve Genç Psikiyatristi, Giresun Çocuk ve Genç Psikiyatristi',
+
+  keywords: [
+    'Ordu psikiyatri',
+    'Ordu pedagog',
+    'Giresun psikiyatri',
+    'Giresun pedagog',
+    'Psikiyatri ordu',
+    'Psikiyatri giresun',
+    'Pedagog Giresun',
+    'Pedagog ordu',
+    'Psikoloji ordu',
+    'Ordu psikoloji',
+    'DEHB ordu',
+    'Ordu DEHB',
+    'Giresun DEHB',
+    'DEHB Giresun',
+    'Çocuk psikoloji bölümü',
+  ],
+  openGraph: {
+    title:
+      'Uzm. Dr. Mehmet Fatih Kınık - Ordu Giresun Çocuk Ergen Psikiyatri Uzmanı',
+    description:
+      'Çocuk ve Ergen Psikiyatristi Uzm. Dr. Mehmet Fatih Kınık, Ordu Çocuk ve Genç Psikiyatristi, Giresun Çocuk ve Genç Psikiyatristi',
+    url: 'https://www.drmehmetfatihkinik.com',
+    type: 'website',
+    images: [
+      {
+        url: 'https://www.drmehmetfatihkinik.com/images/carousel-1.png',
+        width: 1200,
+        height: 800,
+        alt: 'Uzm. Dr. Mehmet Fatih Kınık - Çocuk ve Ergen Psikiyatristi',
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
@@ -21,7 +57,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='en'>
+    <html lang='tr'>
       <Script id='google-tag-manager' strategy='afterInteractive'>
         {`
         (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

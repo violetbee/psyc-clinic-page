@@ -123,25 +123,49 @@ export const Icons = {
     </svg>
   ),
   instagram: (props: any) => (
-    <svg
-      width='800px'
-      height='800px'
-      viewBox='0 0 48 48'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
-      {...props}
-    >
+    <svg viewBox='0 0 48 48' width='48px' height='48px'>
+      <radialGradient
+        id='yOrnnhliCrdS2gy~4tD8ma'
+        cx='19.38'
+        cy='42.035'
+        r='44.899'
+        gradientUnits='userSpaceOnUse'
+      >
+        <stop offset='0' stop-color='#fd5' />
+        <stop offset='.328' stop-color='#ff543f' />
+        <stop offset='.348' stop-color='#fc5245' />
+        <stop offset='.504' stop-color='#e64771' />
+        <stop offset='.643' stop-color='#d53e91' />
+        <stop offset='.761' stop-color='#cc39a4' />
+        <stop offset='.841' stop-color='#c837ab' />
+      </radialGradient>
       <path
-        d='M38 6H10C7.79086 6 6 7.79086 6 10V38C6 40.2091 7.79086 42 10 42H38C40.2091 42 42 40.2091 42 38V10C42 7.79086 40.2091 6 38 6Z'
-        fill='#E4405F'
+        fill='url(#yOrnnhliCrdS2gy~4tD8ma)'
+        d='M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20	c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20	C42.014,38.383,38.417,41.986,34.017,41.99z'
+      />
+      <radialGradient
+        id='yOrnnhliCrdS2gy~4tD8mb'
+        cx='11.786'
+        cy='5.54'
+        r='29.813'
+        gradientTransform='matrix(1 0 0 .6663 0 1.849)'
+        gradientUnits='userSpaceOnUse'
+      >
+        <stop offset='0' stop-color='#4168c9' />
+        <stop offset='.999' stop-color='#4168c9' stop-opacity='0' />
+      </radialGradient>
+      <path
+        fill='url(#yOrnnhliCrdS2gy~4tD8mb)'
+        d='M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20	c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20	C42.014,38.383,38.417,41.986,34.017,41.99z'
       />
       <path
-        d='M24 16C19.5817 16 16 19.5817 16 24C16 28.4183 19.5817 32 24 32C28.4183 32 32 28.4183 32 24C32 19.5817 28.4183 16 24 16ZM24 28C21.7909 28 20 26.2091 20 24C20 21.7909 21.7909 20 24 20C26.2091 20 28 21.7909 28 24C28 26.2091 26.2091 28 24 28Z'
-        fill='white'
+        fill='#fff'
+        d='M24,31c-3.859,0-7-3.14-7-7s3.141-7,7-7s7,3.14,7,7S27.859,31,24,31z M24,19c-2.757,0-5,2.243-5,5	s2.243,5,5,5s5-2.243,5-5S26.757,19,24,19z'
       />
+      <circle cx='31.5' cy='16.5' r='1.5' fill='#fff' />
       <path
-        d='M34 12C34.5523 12 35 11.5523 35 11C35 10.4477 34.5523 10 34 10C33.4477 10 33 10.4477 33 11C33 11.5523 33.4477 12 34 12Z'
-        fill='white'
+        fill='#fff'
+        d='M30,37H18c-3.859,0-7-3.14-7-7V18c0-3.86,3.141-7,7-7h12c3.859,0,7,3.14,7,7v12	C37,33.86,33.859,37,30,37z M18,13c-2.757,0-5,2.243-5,5v12c0,2.757,2.243,5,5,5h12c2.757,0,5-2.243,5-5V18c0-2.757-2.243-5-5-5H18z'
       />
     </svg>
   ),
